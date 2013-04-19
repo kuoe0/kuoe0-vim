@@ -7,6 +7,8 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Bundle 'gmark/vundle'
 
-" repo on github
+" orignal repo on github
+Bundle 'KuoE0/AuthorInfo'
+
 
 filetype plugin indent on
