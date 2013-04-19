@@ -21,6 +21,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'KuoE0/AuthorInfo'
 
 " --- general config ---
 
@@ -75,4 +76,11 @@ endif
 " --- powerline ---
 let g:Powerline_symbols='fancy'
 let g:Powerline_colorscheme='solarized256'
+
+" --- AuthorInfo ---
+let g:vimrc_author='KuoE0'
+let g:vimrc_email='kuoe0.tw@gmail.com'
+let g:vimrc_homepage='http://kuoe0.ch/'
+
+nmap<F4> :AuthorInfoDetect<CR>
 
