@@ -35,3 +35,7 @@ let g:neocomplcache_enable_at_startup=1
 " --- supertab ---
 let g:SuperTabDefaultCompletionType='<C-X><C-U>'
 
+" --- vim-template ---
+let g:email='kuoe0.tw@gmail.com'
+let g:username='KuoE0'
+
