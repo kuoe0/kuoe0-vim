@@ -18,6 +18,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'majutsushi/tagbar'
+Bundle 'Lokaltog/vim-powerline'
 
 " --- general config ---
 
@@ -61,4 +62,8 @@ if OS == "Linux"
 elseif OS == "Darwin"
 	let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
 endif
+
+" --- powerline ---
+let g:Powerline_symbols='fancy'
+let g:Powerline_colorscheme='solarized256'
 
