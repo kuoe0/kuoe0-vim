@@ -21,6 +21,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'KuoE0/AuthorInfo'
+Bundle 'Rip-Rip/clang_complete'
 
 " --- general config ---
 
