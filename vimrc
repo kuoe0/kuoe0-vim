@@ -13,3 +13,12 @@ Bundle 'Shougo/neocomplcache'
 
 
 filetype plugin indent on
+
+" ========================================
+" ---------- plugin setting --------------
+" ========================================
+
+" --- neocomplcache ---
+" auto activate neocomplcache
+let g:neocomplcache_enable_at_startup=1
+
