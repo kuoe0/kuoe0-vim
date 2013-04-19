@@ -12,9 +12,17 @@ Bundle 'KuoE0/AuthorInfo'
 Bundle 'Shougo/neocomplcache'
 Bundle 'ervandew/supertab'
 Bundle 'kana/vim-fakeclip'
+Bundle 'altercation/vim-colors-solarized'
 
+" --- general config ---
 
 filetype plugin indent on
+syntax on
+
+" color config
+set t_Co=256
+colorscheme solarized
+set background=dark
 
 " ========================================
 " ---------- plugin setting --------------
