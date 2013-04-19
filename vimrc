@@ -14,6 +14,7 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'KuoE0/vim-template'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 " --- general config ---
 
@@ -39,4 +40,7 @@ let g:SuperTabDefaultCompletionType='<C-X><C-U>'
 " --- vim-template ---
 let g:email='kuoe0.tw@gmail.com'
 let g:username='KuoE0'
+
+" --- NED Tree ---
+map<F9> <plug>NERDTreeTabsToggle<CR>
 
