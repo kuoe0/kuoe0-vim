@@ -17,8 +17,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
+Bundle 'majutsushi/tagbar'
 
 " --- general config ---
+
+let OS = substitute( system( 'uname' ), "\n", "", "" )
 
 filetype plugin indent on
 syntax on
@@ -45,4 +48,17 @@ let g:username='KuoE0'
 
 " --- NED Tree ---
 map<F9> <plug>NERDTreeTabsToggle<CR>
+
+" --- tarbar ---
+" shortcut 
+nmap<F8> :TagbarToggle<CR>
+" width
+let g:tagbar_width=30
+" tag resource
+
+if OS == "Linux"
+	let g:tagbar_ctags_bin='ctags'
+elseif OS == "Darwin"
+	let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
+endif
 
