@@ -12,6 +12,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'ervandew/supertab'
 Bundle 'kana/vim-fakeclip'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'KuoE0/vim-template'
 
 " --- general config ---
 
