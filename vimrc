@@ -8,7 +8,6 @@ call vundle#rc()
 Bundle 'gmark/vundle'
 
 " orignal repo on github
-Bundle 'Shougo/neocomplcache'
 Bundle 'ervandew/supertab'
 Bundle 'kana/vim-fakeclip'
 Bundle 'altercation/vim-colors-solarized'
@@ -84,3 +83,7 @@ let g:vimrc_homepage='http://kuoe0.ch/'
 
 nmap<F4> :AuthorInfoDetect<CR>
 
+" --- jedi-vim ---
+let g:jedi#autocompletion_command = "<C-X><C-U>"
+" support for supertab
+au FileType python set completefunc=pythoncomplete#Complete
