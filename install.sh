@@ -39,3 +39,7 @@ ln -s $SCRIPTPATH/vimrc ~/.vimrc
 # create undo directory
 mkdir ~/.vim/undo
 
+# download vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/vundle
+# install all plugin
+~/.vim/update.sh
