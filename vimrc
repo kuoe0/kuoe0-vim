@@ -19,6 +19,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-surround'
 
 " --- general config ---
 
