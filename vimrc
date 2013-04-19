@@ -15,6 +15,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'KuoE0/vim-template'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'tpope/vim-commentary'
 
 " --- general config ---
 
