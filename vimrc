@@ -11,6 +11,7 @@ Bundle 'gmark/vundle'
 Bundle 'KuoE0/AuthorInfo'
 Bundle 'Shougo/neocomplcache'
 Bundle 'ervandew/supertab'
+Bundle 'kana/vim-fakeclip'
 
 
 filetype plugin indent on
