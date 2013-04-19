@@ -30,3 +30,6 @@ nmap<F4> :AuthorInfoDetect<CR>
 " auto activate neocomplcache
 let g:neocomplcache_enable_at_startup=1
 
+" --- supertab ---
+let g:SuperTabDefaultCompletionType='<C-X><C-U>'
+
