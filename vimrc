@@ -20,6 +20,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
+Bundle 'davidhalter/jedi-vim'
 
 " --- general config ---
 
