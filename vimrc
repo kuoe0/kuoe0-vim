@@ -16,6 +16,7 @@ Bundle 'KuoE0/vim-template'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-repeat'
 
 " --- general config ---
 
