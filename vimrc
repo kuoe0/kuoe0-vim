@@ -8,7 +8,6 @@ call vundle#rc()
 Bundle 'gmark/vundle'
 
 " orignal repo on github
-Bundle 'KuoE0/AuthorInfo'
 Bundle 'Shougo/neocomplcache'
 Bundle 'ervandew/supertab'
 Bundle 'kana/vim-fakeclip'
@@ -27,13 +26,6 @@ set background=dark
 " ========================================
 " ---------- plugin setting --------------
 " ========================================
-
-" --- AuthorInfo ---
-let g:vimrc_author='KuoE0'
-let g:vimrc_email='kuoe0.tw@gmail.com'
-let g:vimrc_homepage='http://kuoe0.ch/'
-
-nmap<F4> :AuthorInfoDetect<CR>
 
 " --- neocomplcache ---
 " auto activate neocomplcache
