@@ -1,2 +1,2 @@
 # /usr/bin/env sh
-vim +BundleInstall +qa
+vim +BundleInstall! +qa
