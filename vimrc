@@ -30,6 +30,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'KuoE0/AuthorInfo'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'Shougo/neocomplcache'
 
 " --- general config ---
 
@@ -210,5 +211,11 @@ nmap<F4> :AuthorInfoDetect<CR>
 " --- jedi-vim ---
 let g:jedi#autocompletion_command = "<C-X><C-U>"
 " support for supertab
-au FileType python set completefunc=pythoncomplete#Complete
+
+" --- NeoComplCache ---
+let g:neocomplcache_enable_at_startup=1
+" enable omni completion
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+
 
