@@ -40,6 +40,6 @@ ln -s $SCRIPTPATH/vimrc ~/.vimrc
 mkdir ~/.vim/undo
 
 # download vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 # install all plugin
 ~/.vim/update.sh
