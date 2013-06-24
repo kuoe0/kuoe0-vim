@@ -31,6 +31,7 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'KuoE0/AuthorInfo'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache'
+Bundle 'edsono/vim-matchit'
 
 " --- general config ---
 
