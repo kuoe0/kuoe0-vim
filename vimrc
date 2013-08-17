@@ -33,6 +33,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache'
 Bundle 'edsono/vim-matchit'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'adimit/prolog.vim'
 
 " --- general config ---
 
@@ -152,6 +153,9 @@ map <c-h> <c-w>h
 " move to the right split  
 map <c-l> <c-w>l
 
+
+" change fileencoding to utf8 and fileformat to unix
+map <F5> :set fileencoding=utf8 \| :set fileformat=unix <CR>
 
 " =======================================
 " --------------- language --------------
