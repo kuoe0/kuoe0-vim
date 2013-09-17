@@ -25,7 +25,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'majutsushi/tagbar'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'itchyny/lightline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'KuoE0/AuthorInfo'
@@ -203,9 +203,18 @@ elseif OS == "Darwin"
 	let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
 endif
 
-" --- powerline ---
-let g:Powerline_symbols='fancy'
-let g:Powerline_colorscheme='solarized256'
+" --- lightline ---
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
+" symbol ref:
+" https://github.com/Lokaltog/powerline/commit/53fbfe15fead8cc7598bcb4ee9714a221ab7e446
 
 " --- AuthorInfo ---
 let g:vimrc_author='KuoE0'
