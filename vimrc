@@ -34,6 +34,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'edsono/vim-matchit'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'adimit/prolog.vim'
+Bundle 'chusiang/vim-sdcv.git'
 
 " --- general config ---
 
@@ -236,3 +237,6 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" --- vim-sdcv ---
+" use key K to lookup dictionary
+set keywordprg=sdcv
