@@ -238,5 +238,4 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " --- vim-sdcv ---
-" use key K to lookup dictionary
-set keywordprg=sdcv
+nmap <leader>l :call SearchWord()<CR>
