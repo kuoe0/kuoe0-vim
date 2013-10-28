@@ -106,6 +106,9 @@ set clipboard=unnamed	" use system register (*)
 " mouse
 set mouse=a
 
+" spell check
+set spell
+
 " status setting
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ 
