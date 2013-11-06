@@ -1,4 +1,4 @@
-" =============================================================================
+﻿" =============================================================================
 "      FileName: vimrc
 "          Desc: vim environment config
 "        Author: KuoE0
@@ -87,6 +87,10 @@ set shiftwidth=4 	" unit for >> and <<
 set tabstop=4 		" unit for <tab>
 set softtabstop=4 	" unit for mix <tab> and space
 
+" show invisible character
+set listchars=nbsp:¬,tab:»·,trail:·,eol:✓
+set list
+
 " search setting
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
@@ -157,7 +161,8 @@ map <c-h> <c-w>h
 " move to the right split  
 map <c-l> <c-w>l
 
-
+" toggle list
+map <F2> :set list!
 " change fileencoding to utf8 and fileformat to unix
 map <F5> :set fileencoding=utf8 \| :set fileformat=unix <CR>
 
