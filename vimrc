@@ -162,7 +162,7 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " toggle list
-map <F2> :set list!
+map <F2> :set list!<CR>
 " change fileencoding to utf8 and fileformat to unix
 map <F5> :set fileencoding=utf8 \| :set fileformat=unix <CR>
 
