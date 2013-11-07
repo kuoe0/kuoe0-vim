@@ -35,6 +35,7 @@ Bundle 'edsono/vim-matchit'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'adimit/prolog.vim'
 Bundle 'chusiang/vim-sdcv.git'
+Bundle 'mattn/emmet-vim'
 
 " --- general config ---
 
@@ -247,3 +248,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " --- vim-sdcv ---
 nmap <leader>l :call SearchWord()<CR>
+
+" --- emmet ---
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,php EmmetInstall
+
