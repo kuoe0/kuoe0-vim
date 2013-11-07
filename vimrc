@@ -89,7 +89,7 @@ set tabstop=4 		" unit for <tab>
 set softtabstop=4 	" unit for mix <tab> and space
 
 " show invisible character
-set listchars=nbsp:¬,tab:»·,trail:·,eol:✓
+set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
 set list
 
 " search setting
