@@ -138,6 +138,8 @@ endfunction
 
 " --- hotkey config ---
 
+let mapleader="`"
+
 " mouse toggle
 map m :set mouse=nv<CR>
 map <silent><leader>m :set mouse=<CR>
@@ -167,6 +169,14 @@ map <c-l> <c-w>l
 map <F2> :set list!<CR>
 " change fileencoding to utf8 and fileformat to unix
 map <F5> :set fileencoding=utf8 \| :set fileformat=unix <CR>
+
+" underline for title
+nnoremap <Leader>t= yypVr=
+nnoremap <Leader>t- yypVr-
+nnoremap <Leader>t# yypVr#
+nnoremap <Leader>t" yypVr"
+nnoremap <Leader>t* yypVr*
+
 
 " =======================================
 " --------------- language --------------
