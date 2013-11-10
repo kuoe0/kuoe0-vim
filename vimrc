@@ -36,6 +36,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'adimit/prolog.vim'
 Bundle 'chusiang/vim-sdcv.git'
 Bundle 'mattn/emmet-vim'
+Bundle 'justinmk/vim-sneak'
 
 " --- general config ---
 
