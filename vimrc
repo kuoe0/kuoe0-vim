@@ -192,6 +192,8 @@ function! PythonStyle()
 endfunction
 au BufRead,BufNewFile *py,*pyw call PythonStyle()
 
+" --- Arduino  ---
+autocmd BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 
 " ========================================
 " ---------- plugin setting --------------
