@@ -266,3 +266,5 @@ nmap <leader>l :call SearchWord()<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
+" --- clang_complete
+let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
