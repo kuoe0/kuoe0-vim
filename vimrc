@@ -16,7 +16,6 @@ call vundle#rc()
 Bundle 'gmark/vundle'
 
 " orignal repo on github
-Bundle 'ervandew/supertab'
 Bundle 'kana/vim-fakeclip'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'KuoE0/vim-template'
@@ -29,14 +28,13 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'KuoE0/AuthorInfo'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'Shougo/neocomplcache'
 Bundle 'edsono/vim-matchit'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'adimit/prolog.vim'
 Bundle 'chusiang/vim-sdcv.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'justinmk/vim-sneak'
+Bundle 'Valloric/YouCompleteMe'
 
 " --- general config ---
 
@@ -203,8 +201,6 @@ autocmd BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 " auto activate neocomplcache
 let g:neocomplcache_enable_at_startup=1
 
-" --- supertab ---
-let g:SuperTabDefaultCompletionType='<C-X><C-U>'
 
 " --- vim-template ---
 let g:email='kuoe0.tw@gmail.com'
@@ -246,19 +242,6 @@ let g:vimrc_homepage='http://kuoe0.ch/'
 
 nmap<F4> :AuthorInfoDetect<CR>
 
-" --- jedi-vim ---
-let g:jedi#autocompletion_command = "<C-X><C-U>"
-" support for supertab
-
-" --- NeoComplCache ---
-let g:neocomplcache_enable_at_startup=1
-" enable omni completion
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 " --- vim-sdcv ---
 nmap <leader>l :call SearchWord()<CR>
 
@@ -266,5 +249,7 @@ nmap <leader>l :call SearchWord()<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
-" --- clang_complete
-let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+" --- YouCompleteMe ---
+let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+
+
