@@ -13,7 +13,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle
-Bundle 'gmark/vundle'
+Bundle 'gmarik/vundle'
 
 " orignal repo on github
 Bundle 'ervandew/supertab'
@@ -192,8 +192,11 @@ function! PythonStyle()
 endfunction
 au BufRead,BufNewFile *py,*pyw call PythonStyle()
 
-" --- Arduino  ---
-autocmd BufRead,BufNewFile *.pde,*.ino set filetype=cpp
+" --- Arduino ---
+autocmd BufRead,BufNewFile *.ino,*.ino set filetype=cpp
+
+" --- Processing ---
+autocmd BufRead,BufNewFile *.pde,*.ino set filetype=java
 
 " ========================================
 " ---------- plugin setting --------------
