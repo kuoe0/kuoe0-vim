@@ -48,7 +48,11 @@ syntax on
 
 " color config
 set t_Co=256
-colorscheme solarized
+try
+	colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+	colorscheme morning
+endtry
 set background=dark
 
 " auto reload vimrc when editing
