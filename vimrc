@@ -3,7 +3,7 @@
 "          Desc: vim environment config
 "        Author: KuoE0
 "         Email: kuoe0.tw@gmail.com
-"      HomePage: http://kuoe0.ch/
+"      HomePage: http://kuoe0.tw/
 " =============================================================================
 
 set nocompatible
