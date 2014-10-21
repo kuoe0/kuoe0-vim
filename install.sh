@@ -1,4 +1,4 @@
-# /usr/bin/env sh
+# /usr/bin/env bash
 # Author: 	KuoE0 <kuoe0.tw@gmail.com>
 # Description: 	Auto install vimrc
 
@@ -37,7 +37,9 @@ ln -s $SCRIPTPATH ~/.vim
 ln -s $SCRIPTPATH/vimrc ~/.vimrc
 
 # create undo directory
-mkdir ~/.vim/undo
+if [ ! -d ~/.vim/undo ]; then
+	mkdir ~/.vim/undo
+fi
 
 # download vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
