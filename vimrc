@@ -37,6 +37,7 @@ Bundle 'adimit/prolog.vim'
 Bundle 'chusiang/vim-sdcv.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'justinmk/vim-sneak'
+Bundle 'sophacles/vim-processing'
 
 " --- general config ---
 
