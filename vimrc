@@ -251,7 +251,8 @@ let g:vimrc_homepage='http://kuoe0.ch/'
 nmap<F4> :AuthorInfoDetect<CR>
 
 " --- jedi-vim ---
-let g:jedi#autocompletion_command = "<C-X><C-U>"
+let g:jedi#completions_command = "<C-X><C-U>"
+
 " support for supertab
 
 " --- NeoComplCache ---
