@@ -19,9 +19,9 @@ fi
 # absolute path of this script, e.g. /home/usr/bin/foo.sh
 SCRIPT=`$READLINK -f $0`
 # absolute path of current directory
-SCRIPTPATH=`dirname $SCRIPT`
+SCRIPTPATH=`dirname "$SCRIPT"`
 
-echo $SCRIPTPATH
+echo "$SCRIPTPATH"
 
 # remove origin .vim and .vimrc 
 if [ -f ~/.vim ] || [ -h ~/.vim ]; then
