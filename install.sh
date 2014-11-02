@@ -24,8 +24,8 @@ SCRIPTPATH=`dirname "$SCRIPT"`
 echo "$SCRIPTPATH"
 
 # remove origin .vim and .vimrc 
-if [ -f ~/.vim ] || [ -h ~/.vim ]; then
-	rm ~/.vim
+if [ -d ~/.vim ] || [ -h ~/.vim ]; then
+	rm -rf ~/.vim
 fi
 
 if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
