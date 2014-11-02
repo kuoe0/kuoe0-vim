@@ -33,8 +33,8 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
 fi
 
 # re-link them with current file
-ln -s $SCRIPTPATH ~/.vim
-ln -s $SCRIPTPATH/vimrc ~/.vimrc
+ln -s "$SCRIPTPATH" ~/.vim
+ln -s "$SCRIPTPATH/vimrc" ~/.vimrc
 
 # create undo directory
 if [ ! -d ~/.vim/undo ]; then
