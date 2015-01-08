@@ -276,4 +276,11 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
 " --- clang_complete
-let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+
+if OS == 'Darwin'
+	let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+elseif OS == 'Linux'
+	let g:clang_library_path='/usr/lib/llvm-3.4/lib'
+endif
+
+
