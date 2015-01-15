@@ -19,13 +19,13 @@ fi
 # absolute path of this script, e.g. /home/usr/bin/foo.sh
 SCRIPT=`$READLINK -f $0`
 # absolute path of current directory
-SCRIPTPATH=`dirname $SCRIPT`
+SCRIPTPATH=`dirname "$SCRIPT"`
 
-echo $SCRIPTPATH
+echo "$SCRIPTPATH"
 
 # remove origin .vim and .vimrc 
-if [ -f ~/.vim ] || [ -h ~/.vim ]; then
-	rm ~/.vim
+if [ -d ~/.vim ] || [ -h ~/.vim ]; then
+	rm -rf ~/.vim
 fi
 
 if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
@@ -33,8 +33,8 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
 fi
 
 # re-link them with current file
-ln -s $SCRIPTPATH ~/.vim
-ln -s $SCRIPTPATH/vimrc ~/.vimrc
+ln -s "$SCRIPTPATH" ~/.vim
+ln -s "$SCRIPTPATH/vimrc" ~/.vimrc
 
 # create undo directory
 if [ ! -d ~/.vim/undo ]; then
