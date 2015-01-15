@@ -203,6 +203,9 @@ autocmd BufRead,BufNewFile *.ino set filetype=cpp
 " --- Processing ---
 autocmd BufRead,BufNewFile *.pde set filetype=java
 
+" --- Mozilla ---
+autocmd BufRead,BufNewFile moz.build set filetype=python
+
 " ========================================
 " ---------- plugin setting --------------
 " ========================================
