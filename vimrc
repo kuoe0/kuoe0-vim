@@ -38,6 +38,9 @@ Bundle 'chusiang/vim-sdcv.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'justinmk/vim-sneak'
 Bundle 'sophacles/vim-processing'
+Bundle 'thinca/vim-localrc'
+Bundle 'jelera/vim-javascript-syntax'
+Plugin 'othree/html5.vim'
 
 " --- general config ---
 
