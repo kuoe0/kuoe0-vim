@@ -29,6 +29,7 @@ Plugin 'KuoE0/AuthorInfo'
 Plugin 'edsono/vim-matchit'
 Plugin 'chusiang/vim-sdcv.git'
 Plugin 'thinca/vim-localrc'
+Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 
 " --- general config ---
@@ -244,6 +245,16 @@ nmap <leader>l :call SearchWord()<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
+" --- syntastic ---
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
 " --- YouCompleteMe ---
 " YCM generator: https://github.com/rdnetto/YCM-Generator
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
@@ -263,3 +274,4 @@ let g:ycm_cache_omnifunc = 0
 nnoremap <leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <leader>t    :YcmCompleter GetType<CR>
+
