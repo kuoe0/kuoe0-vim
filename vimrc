@@ -16,7 +16,6 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " orignal repo on github
-Plugin 'ervandew/supertab'
 Plugin 'kana/vim-fakeclip'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'KuoE0/vim-template'
@@ -24,23 +23,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'majutsushi/tagbar'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'KuoE0/AuthorInfo'
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'Shougo/neocomplcache'
 Plugin 'edsono/vim-matchit'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'adimit/prolog.vim'
 Plugin 'chusiang/vim-sdcv.git'
-Plugin 'mattn/emmet-vim'
-Plugin 'justinmk/vim-sneak'
-Plugin 'sophacles/vim-processing'
 Plugin 'thinca/vim-localrc'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/html5.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " --- general config ---
 
@@ -60,6 +49,10 @@ set background=dark
 
 " auto reload vimrc when editing
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" completion options
+set completeopt=longest,menu
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
 " read multiple file encoding
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,cp950
@@ -215,13 +208,6 @@ autocmd BufRead,BufNewFile *.jsm set filetype=javascript
 " ---------- plugin setting --------------
 " ========================================
 
-" --- neocomplcache ---
-" auto activate neocomplcache
-let g:neocomplcache_enable_at_startup=1
-
-" --- supertab ---
-let g:SuperTabDefaultCompletionType='<C-X><C-U>'
-
 " --- vim-template ---
 let g:email='kuoe0.tw@gmail.com'
 let g:username='KuoE0'
@@ -229,18 +215,6 @@ let g:username='KuoE0'
 " --- NED Tree ---
 map<F9> <plug>NERDTreeTabsToggle<CR>
 
-" --- tarbar ---
-" shortcut 
-nmap<F8> :TagbarToggle<CR>
-" width
-let g:tagbar_width=30
-" tag resource
-
-if OS == "Linux"
-	let g:tagbar_ctags_bin='ctags'
-elseif OS == "Darwin"
-	let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
-endif
 
 " --- lightline ---
 let g:lightline = {
@@ -262,19 +236,6 @@ let g:vimrc_homepage='http://kuoe0.ch/'
 
 nmap<F4> :AuthorInfoDetect<CR>
 
-" --- jedi-vim ---
-let g:jedi#completions_command = "<C-X><C-U>"
-
-" support for supertab
-
-" --- NeoComplCache ---
-let g:neocomplcache_enable_at_startup=1
-" enable omni completion
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " --- vim-sdcv ---
 nmap <leader>l :call SearchWord()<CR>
@@ -283,12 +244,22 @@ nmap <leader>l :call SearchWord()<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
-" --- clang_complete
-
-if OS == 'Darwin'
-	let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
-elseif OS == 'Linux'
-	let g:clang_library_path='/usr/lib/llvm-3.4/lib'
-endif
-
-
+" --- YouCompleteMe ---
+" YCM generator: https://github.com/rdnetto/YCM-Generator
+let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" completion for keyword in language
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+" load from tagfiles like tags generated from exuberant ctags
+let g:ycm_collect_identifiers_from_tags_files = 1
+" disable cache
+let g:ycm_cache_omnifunc = 0
+" jump to definition or declaration
+nnoremap <leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" get type of current variable
+nnoremap <leader>t    :YcmCompleter GetType<CR>
