@@ -1,2 +1,3 @@
 # /usr/bin/env sh
-vim +BundleInstall! +qa
+vim +PluginClean! +qa
+vim +PluginInstall! +qa
