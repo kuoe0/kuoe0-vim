@@ -47,5 +47,11 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ~/.vim/update.sh
 
 # install YCM
-~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+cd ~/.vim
+# install vimproc
+cd ~/.vim/bundle/vimproc.vim
+make
+cd ~/.vim
 

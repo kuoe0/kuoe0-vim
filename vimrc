@@ -30,6 +30,9 @@ Plugin 'edsono/vim-matchit'
 Plugin 'chusiang/vim-sdcv.git'
 Plugin 'thinca/vim-localrc'
 Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/neomru.vim'
 Plugin 'Valloric/YouCompleteMe'
 
 " --- general config ---
@@ -144,7 +147,7 @@ let mapleader="`"
 
 " mouse toggle
 map m :set mouse=nv<CR>
-map <silent><leader>m :set mouse=<CR>
+map <silent><Leader>m :set mouse=<CR>
 
 " indent in normal mode
 map<tab> v>
@@ -239,7 +242,7 @@ nmap<F4> :AuthorInfoDetect<CR>
 
 
 " --- vim-sdcv ---
-nmap <leader>l :call SearchWord()<CR>
+nmap <Leader>l :call SearchWord()<CR>
 
 " --- emmet ---
 let g:user_emmet_install_global = 0
@@ -253,7 +256,17 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
+
+" --- unite.vim ---
+let g:unite_source_history_yank_enable = 1
+" file search
+nnoremap <Leader>ff :Unite -start-insert file_rec/async<CR>
+nnoremap <Leader>rf :Unite -quick-match file_mru<CR>
+" content search
+nnoremap <Leader>g  :Unite -auto-preview grep:.<CR>
+" quick switch between buffer
+nnoremap <Leader>s  :Unite -quick-match buffer<CR>
 
 " --- YouCompleteMe ---
 " YCM generator: https://github.com/rdnetto/YCM-Generator
@@ -271,7 +284,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 " disable cache
 let g:ycm_cache_omnifunc = 0
 " jump to definition or declaration
-nnoremap <leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
-nnoremap <leader>t    :YcmCompleter GetType<CR>
+nnoremap <Leader>type :YcmCompleter GetType<CR>
 
