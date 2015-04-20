@@ -46,12 +46,6 @@ flags = [
 '/usr/include',
 '-isystem',
 '/usr/local/include',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'
 ]
 
 
@@ -153,15 +147,22 @@ def GetCppIncludePath():
     import sys
     global flags
     include_paths = []
+    include_paths.append(sorted(glob.glob('/usr/include/c++/*'))[-1])
+    include_paths.append(sorted(glob.glob('/usr/local/include/c++/*'))[-1])
 
     if sys.platform == 'linux2':
         include_paths.append(sorted(glob.glob('/usr/lib/clang/*/include'))[-1])
-        include_paths.append(sorted(glob.glob('/usr/include/c++/*'))[-1])
         include_paths.append(sorted(glob.glob('/usr/lib/gcc/x86_64-linux-gnu/*/include'))[-1])
         include_paths.append('/usr/include/x86_64-linux-gnu')
 
+    if sys.platform == 'darwin':
+        include_paths.append(sorted(glob.glob('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/*'))[-1])
+        include_paths.append(sorted(glob.glob('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/*/include'))[-1])
+        include_paths.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include')
+
     for path in include_paths:
-        flags += ['-isystem', path]
+        if path:
+            flags += ['-isystem', path]
 
 GetCppIncludePath()
 
