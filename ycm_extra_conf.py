@@ -148,3 +148,20 @@ def FlagsForFile( filename, **kwargs ):
     'do_cache': True
   }
 
+def GetCppIncludePath():
+    import glob
+    import sys
+    global flags
+    include_paths = []
+
+    if sys.platform == 'linux2':
+        include_paths.append(sorted(glob.glob('/usr/lib/clang/*/include'))[-1])
+        include_paths.append(sorted(glob.glob('/usr/include/c++/*'))[-1])
+        include_paths.append(sorted(glob.glob('/usr/lib/gcc/x86_64-linux-gnu/*/include'))[-1])
+        include_paths.append('/usr/include/x86_64-linux-gnu')
+
+    for path in include_paths:
+        flags += ['-isystem', path]
+
+GetCppIncludePath()
+
