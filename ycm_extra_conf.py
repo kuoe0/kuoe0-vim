@@ -146,19 +146,27 @@ def GetCppIncludePath():
     import glob
     import sys
     global flags
+    # alias ls to glob.glob
+    ls = glob.glob
+
+    def GetPath(path):
+        if ls(path):
+            return sorted(ls(path))[-1]
+        return None
+
     include_paths = []
-    include_paths.append(sorted(glob.glob('/usr/include/c++/*'))[-1])
-    include_paths.append(sorted(glob.glob('/usr/local/include/c++/*'))[-1])
+    include_paths.append(GetPath('/usr/include/c++/*'))
+    include_paths.append(GetPath('/usr/local/include/c++/*'))
 
     if sys.platform == 'linux2':
-        include_paths.append(sorted(glob.glob('/usr/lib/clang/*/include'))[-1])
-        include_paths.append(sorted(glob.glob('/usr/lib/gcc/x86_64-linux-gnu/*/include'))[-1])
-        include_paths.append('/usr/include/x86_64-linux-gnu')
+        include_paths.append(GetPath('/usr/lib/clang/*/include'))
+        include_paths.append(GetPath('/usr/lib/gcc/x86_64-linux-gnu/*/include'))
+        include_paths.append(GetPath('/usr/include/x86_64-linux-gnu'))
 
     if sys.platform == 'darwin':
-        include_paths.append(sorted(glob.glob('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/*'))[-1])
-        include_paths.append(sorted(glob.glob('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/*/include'))[-1])
-        include_paths.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include')
+        include_paths.append(GetPath('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/*'))
+        include_paths.append(GetPath('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/*/include'))
+        include_paths.append(GetPath('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'))
 
     for path in include_paths:
         if path:
