@@ -28,11 +28,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'KuoE0/AuthorInfo'
 Plugin 'edsono/vim-matchit'
 Plugin 'chusiang/vim-sdcv.git'
+Plugin 'mattn/emmet-vim'
 Plugin 'thinca/vim-localrc'
 Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/neomru.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 " ZSH syntax highlight
 Plugin 'clones/vim-zsh'
@@ -114,7 +113,7 @@ set undoreload=1000
 set history=100
 
 " clipboard
-set clipboard=unnamed	" use system register (*)
+set clipboard=unnamedplus	" use system register (*)
 
 " mouse
 set mouse=a
@@ -250,7 +249,7 @@ nmap<F4> :AuthorInfoDetect<CR>
 " --- vim-sdcv ---
 nmap <Leader>l :call SearchWord()<CR>
 
-" --- emmet ---
+" --- emmet-vim ---
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
@@ -263,16 +262,6 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-
-" --- unite.vim ---
-let g:unite_source_history_yank_enable = 1
-" file search
-nnoremap <Leader>ff :Unite -start-insert file_rec/async<CR>
-nnoremap <Leader>rf :Unite -quick-match file_mru<CR>
-" content search
-nnoremap <Leader>g  :Unite -auto-preview grep:.<CR>
-" quick switch between buffer
-nnoremap <Leader>s  :Unite -quick-match buffer<CR>
 
 " --- YouCompleteMe ---
 " YCM generator: https://github.com/rdnetto/YCM-Generator
@@ -289,8 +278,15 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 " disable cache
 let g:ycm_cache_omnifunc = 0
+let g:ycm_confirm_extra_conf = 0
 " jump to definition or declaration
 nnoremap <Leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
+
+" --- Ctrl-P ---
+let g:ctrlp_working_path_mode = 'ra'
+nnoremap <Leader>ff :CtrlP<CR>
+nnoremap <Leader>fb :CtrlPBuffer<CR>
+nnoremap <Leader>fr :CtrlPMRU<CR>
 
