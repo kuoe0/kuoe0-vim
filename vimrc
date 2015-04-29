@@ -34,6 +34,8 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/neomru.vim'
 Plugin 'Valloric/YouCompleteMe'
+" ZSH syntax highlight
+Plugin 'clones/vim-zsh'
 
 " --- general config ---
 
@@ -206,6 +208,10 @@ autocmd BufRead,BufNewFile *.pde set filetype=java
 " --- Mozilla ---
 autocmd BufRead,BufNewFile moz.build set filetype=python
 autocmd BufRead,BufNewFile *.jsm set filetype=javascript
+
+" --- ZSH ---
+autocmd BufRead,BufNewFile *.zsh* set filetype=zsh
+
 
 
 " ========================================
