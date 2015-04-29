@@ -28,6 +28,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'KuoE0/AuthorInfo'
 Plugin 'edsono/vim-matchit'
 Plugin 'chusiang/vim-sdcv.git'
+Plugin 'mattn/emmet-vim'
 Plugin 'thinca/vim-localrc'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
@@ -248,7 +249,7 @@ nmap<F4> :AuthorInfoDetect<CR>
 " --- vim-sdcv ---
 nmap <Leader>l :call SearchWord()<CR>
 
-" --- emmet ---
+" --- emmet-vim ---
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
