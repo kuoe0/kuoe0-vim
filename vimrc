@@ -99,6 +99,9 @@ set softtabstop=4 	" unit for mix <tab> and space
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
 set list
 
+" better line wraps
+set showbreak=⇇
+
 " search setting
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
