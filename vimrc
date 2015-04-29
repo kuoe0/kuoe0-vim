@@ -277,3 +277,9 @@ nnoremap <Leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
 
+" --- Ctrl-P ---
+let g:ctrlp_working_path_mode = 'ra'
+nnoremap <Leader>ff :CtrlP<CR>
+nnoremap <Leader>fb :CtrlPBuffer<CR>
+nnoremap <Leader>fr :CtrlPMRU<CR>
+
