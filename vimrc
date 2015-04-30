@@ -35,6 +35,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 " ZSH syntax highlight
 Plugin 'clones/vim-zsh'
+" Logcat syntax highlight
+Plugin 'thinca/vim-logcat'
+
 
 " --- general config ---
 
