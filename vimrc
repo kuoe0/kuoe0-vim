@@ -191,6 +191,13 @@ nnoremap <Leader>t* yypVr*
 " --------------- language --------------
 " =======================================
 
+" highlight trailing space
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
+autocmd InsertEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} call clearmatches()
+
 " --- python ---
 function! PythonStyle()
 	set expandtab
