@@ -37,6 +37,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'clones/vim-zsh'
 " Logcat syntax highlight
 Plugin 'thinca/vim-logcat'
+Plugin 'Lokaltog/vim-easymotion'
+
 
 
 " --- general config ---
