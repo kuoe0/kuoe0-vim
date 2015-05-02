@@ -120,7 +120,7 @@ set undoreload=1000
 set history=100
 
 " clipboard
-set clipboard=unnamedplus	" use system register (*)
+set clipboard=unnamed	" use system register (*)
 
 " mouse
 set mouse=a
