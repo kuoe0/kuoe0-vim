@@ -38,6 +38,7 @@ Plugin 'clones/vim-zsh'
 " Logcat syntax highlight
 Plugin 'thinca/vim-logcat'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'sjl/gundo.vim'
 
 
 
@@ -308,4 +309,7 @@ let g:ctrlp_working_path_mode = 'ra'
 nnoremap <Leader>ff :CtrlP<CR>
 nnoremap <Leader>fb :CtrlPBuffer<CR>
 nnoremap <Leader>fr :CtrlPMRU<CR>
+
+" --- Gundo ---
+nnoremap <Leader>undo :GundoToggle<CR>
 
