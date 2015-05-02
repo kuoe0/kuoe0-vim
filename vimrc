@@ -39,8 +39,7 @@ Plugin 'clones/vim-zsh'
 Plugin 'thinca/vim-logcat'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sjl/gundo.vim'
-
-
+Plugin 'tpope/vim-abolish'
 
 " --- general config ---
 
