@@ -109,6 +109,7 @@ set showbreak=⇇
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
 
+
 " undo setting
 set undofile
 set undodir=~/.vim/undo
@@ -151,6 +152,9 @@ endfunction
 " --- hotkey config ---
 
 let mapleader="`"
+
+" remove the highlight of search result
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " mouse toggle
 map m :set mouse=nv<CR>
