@@ -40,6 +40,7 @@ Plugin 'thinca/vim-logcat'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-abolish'
+Plugin 'brookhong/cscope.vim'
 
 " --- general config ---
 
@@ -312,3 +313,20 @@ nnoremap <Leader>fr :CtrlPMRU<CR>
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
 
+" --- cscope ---
+" s: Find this C symbol
+nnoremap  <leader>css :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <leader>csg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <leader>csd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <leader>csc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <leader>cst :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <leader>cse :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
