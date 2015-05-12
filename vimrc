@@ -41,6 +41,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'brookhong/cscope.vim'
+Plugin 'rking/ag.vim'
 
 " --- general config ---
 
@@ -150,7 +151,6 @@ function! CurDir()
 	let curdir = substitute(getcwd(), $HOME, "~", "")
 	return curdir
 endfunction
-
 
 " --- hotkey config ---
 
