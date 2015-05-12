@@ -50,8 +50,4 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
 cd ~/.vim
-# install vimproc
-cd ~/.vim/bundle/vimproc.vim
-make
-cd ~/.vim
 
