@@ -309,6 +309,13 @@ let g:ctrlp_max_files = 200000
 nnoremap <Leader>ff :CtrlP<CR>
 nnoremap <Leader>fb :CtrlPBuffer<CR>
 nnoremap <Leader>fr :CtrlPMRU<CR>
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
