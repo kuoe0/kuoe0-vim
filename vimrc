@@ -305,7 +305,7 @@ nnoremap <Leader>type :YcmCompleter GetType<CR>
 
 " --- Ctrl-P ---
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_max_files = 200000
+let g:ctrlp_max_files = 0
 nnoremap <Leader>ff :CtrlP<CR>
 nnoremap <Leader>fb :CtrlPBuffer<CR>
 nnoremap <Leader>fr :CtrlPMRU<CR>
