@@ -104,7 +104,6 @@ set softtabstop=4 	" unit for mix <tab> and space
 
 " show invisible character
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
-set list
 
 " better line wraps
 set showbreak=⇇
