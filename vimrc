@@ -105,7 +105,9 @@ set softtabstop=4 	" unit for mix <tab> and space
 
 " show invisible character
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
-set list
+
+" better line wraps
+set showbreak=⇇
 
 " better line wraps
 set showbreak=⇇
@@ -156,6 +158,9 @@ endfunction
 " --- hotkey config ---
 
 let mapleader="\""
+
+" remove the highlight of search result
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " remove the highlight of search result
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
