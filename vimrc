@@ -42,6 +42,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'brookhong/cscope.vim'
 Plugin 'rking/ag.vim'
+Plugin 'majutsushi/tagbar'
 
 " --- general config ---
 
@@ -104,6 +105,9 @@ set softtabstop=4 	" unit for mix <tab> and space
 
 " show invisible character
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
+
+" better line wraps
+set showbreak=⇇
 
 " better line wraps
 set showbreak=⇇
@@ -303,7 +307,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_cache_omnifunc = 0
 let g:ycm_confirm_extra_conf = 0
 " jump to definition or declaration
-nnoremap <Leader><CR> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
 
@@ -341,3 +345,6 @@ nnoremap  <leader>cse :call CscopeFind('e', expand('<cword>'))<CR>
 nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
+
+" --- Tagbar ---
+nmap <F8> :TagbarToggle<CR>
