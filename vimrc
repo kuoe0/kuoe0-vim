@@ -153,7 +153,7 @@ endfunction
 
 " --- hotkey config ---
 
-let mapleader="`"
+let mapleader="\<Space>"
 
 " remove the highlight of search result
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
@@ -207,7 +207,7 @@ autocmd InsertEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /
 autocmd InsertLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} call clearmatches()
 
-" --- python ---
+" --- Python ---
 function! PythonStyle()
 	set expandtab
 	" mark invalid indentation
@@ -215,7 +215,11 @@ function! PythonStyle()
 	match BadWhitespace /^\t\+/ 
 
 endfunction
-au BufRead,BufNewFile *py,*pyw call PythonStyle()
+autocmd BufRead,BufNewFile *py,*pyw call PythonStyle()
+
+" --- JavaScript ---
+autocmd BufRead,BufNewFile *js set tabstop=2
+autocmd BufRead,BufNewFile *js set shiftwidth=2
 
 " --- Arduino ---
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
