@@ -48,6 +48,6 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # install YCM
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+./install.py --clang-completer
 cd ~/.vim
 
