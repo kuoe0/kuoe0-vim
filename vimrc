@@ -211,6 +211,9 @@ autocmd InsertEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /
 autocmd InsertLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} call clearmatches()
 
+" --- C/C++ ---
+autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarToggle
+
 " --- Python ---
 function! PythonStyle()
 	set expandtab
