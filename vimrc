@@ -102,6 +102,7 @@ set smarttab
 set shiftwidth=4 	" unit for >> and <<
 set tabstop=4 		" unit for <tab>
 set softtabstop=4 	" unit for mix <tab> and space
+set modeline
 
 " show invisible character
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
