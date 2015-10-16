@@ -92,6 +92,9 @@ set showmode
 " show matched parentheses, e.g. () [] {}
 set showmatch
 
+" enable modeline to fit the display settings for opened file
+set modeline
+
 " indent setting
 set cindent
 set autoindent
