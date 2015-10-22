@@ -99,13 +99,13 @@ set modeline
 set cindent
 set autoindent
 set smartindent
-set smarttab
+set smarttab " insert tabs on the start of a line according to shiftwidth, not tabstop
 
 " tab setting
 set shiftwidth=4 	" unit for >> and <<
 set tabstop=4 		" unit for <tab>
 set softtabstop=4 	" unit for mix <tab> and space
-set shiftround
+set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 
 " show invisible character
 set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
