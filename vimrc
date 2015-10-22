@@ -119,6 +119,8 @@ set showbreak=⇇
 " search setting
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
+set ignorecase  " ignore case when searching
+set smartcase   " ignore case if search pattern is all lowercase, case-sensitive otherwise
 
 " hides buffers instead of closing them
 set hidden
