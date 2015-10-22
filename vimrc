@@ -43,6 +43,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'brookhong/cscope.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'rhysd/conflict-marker.vim' " git conflict marker
 
 " --- general config ---
 
