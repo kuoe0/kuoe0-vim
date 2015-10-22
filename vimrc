@@ -84,6 +84,8 @@ set cursorline
 set colorcolumn=81 	" 'set cc=81' for short
 hi ColorColumn ctermbg=0
 
+set wildignore+=.git
+
 " show command
 set showcmd
 
@@ -319,16 +321,24 @@ nnoremap <Leader>type :YcmCompleter GetType<CR>
 " --- Ctrl-P ---
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_files = 0
+let g:ctrlp_dotfiles = 0 " don't search dotfiles
+
 nnoremap <Leader>ff :CtrlP<CR>
 nnoremap <Leader>fb :CtrlPBuffer<CR>
 nnoremap <Leader>fr :CtrlPMRU<CR>
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
+	\ --ignore .git
+	\ --ignore .svn
+	\ --ignore .hg
+	\ --ignore .DS_Store
+	\ --ignore "**/*.pyc"
+	\ -g ""'
+
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+    \ }
 
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
