@@ -23,7 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'KuoE0/AuthorInfo'
 Plugin 'edsono/vim-matchit'
@@ -262,19 +262,9 @@ let g:username='KuoE0'
 " --- NED Tree ---
 map<F9> <plug>NERDTreeTabsToggle<CR>
 
-
-" --- lightline ---
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
-
-" symbol ref:
-" https://github.com/Lokaltog/powerline/commit/53fbfe15fead8cc7598bcb4ee9714a221ab7e446
+" --- airline ---
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " --- AuthorInfo ---
 let g:vimrc_author='KuoE0'
