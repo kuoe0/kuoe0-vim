@@ -120,6 +120,8 @@ set showbreak=⇇
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
 
+" hides buffers instead of closing them
+set hidden
 
 " undo setting
 set undofile
@@ -355,3 +357,4 @@ nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " --- Tagbar ---
 nmap <F8> :TagbarToggle<CR>
+
