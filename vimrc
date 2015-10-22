@@ -170,6 +170,9 @@ let mapleader="\<Space>"
 " remove the highlight of search result
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
+" make ; be as same as :
+nnoremap ; :
+
 " mouse toggle
 map m :set mouse=nv<CR>
 map <silent><Leader>m :set mouse=<CR>
