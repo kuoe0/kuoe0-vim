@@ -116,9 +116,6 @@ set listchars=nbsp:¬,tab:»·,trail:·,eol:⑀
 " better line wraps
 set showbreak=⇇
 
-" better line wraps
-set showbreak=⇇
-
 " search setting
 set hlsearch 	" highlight search result
 set incsearch 	" go to first result 
