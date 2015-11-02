@@ -45,6 +45,9 @@ Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rhysd/conflict-marker.vim' " git conflict marker
 
+Plugin 'junegunn/vim-pseudocl'
+Plugin 'junegunn/vim-oblique'
+
 " --- general config ---
 
 let OS = substitute( system( 'uname' ), "\n", "", "" )
