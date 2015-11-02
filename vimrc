@@ -45,6 +45,8 @@ Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rhysd/conflict-marker.vim' " git conflict marker
 
+Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
+
 Plugin 'junegunn/vim-pseudocl'
 Plugin 'junegunn/vim-oblique'
 
