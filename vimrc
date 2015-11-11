@@ -228,7 +228,7 @@ autocmd InsertLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /
 autocmd BufWinLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} call clearmatches()
 
 " --- C/C++ ---
-autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpenAutoClose
+autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpen
 
 " --- Python ---
 function! PythonStyle()
