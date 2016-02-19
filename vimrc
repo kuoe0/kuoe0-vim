@@ -44,6 +44,7 @@ Plugin 'brookhong/cscope.vim'
 Plugin 'rking/ag.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rhysd/conflict-marker.vim' " git conflict marker
+Plugin 'ternjs/tern_for_vim'
 
 Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
 
