@@ -74,7 +74,7 @@ set completeopt=longest,menu
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
 " read multiple file encoding
-set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,cp950
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,cp950,gb18030
 
 " enable line number
 set number 	" 'set nu' for short
