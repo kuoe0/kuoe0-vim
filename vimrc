@@ -244,6 +244,7 @@ autocmd BufRead,BufNewFile *py,*pyw call PythonStyle()
 " --- JavaScript ---
 autocmd BufRead,BufNewFile *js set tabstop=2
 autocmd BufRead,BufNewFile *js set shiftwidth=2
+let g:syntastic_javascript_checkers = ['eslint']
 
 " --- Arduino ---
 autocmd BufRead,BufNewFile *.ino set filetype=cpp

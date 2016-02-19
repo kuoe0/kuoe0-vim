@@ -10,3 +10,6 @@ requirement
 - cmake
 - ctags
 
+For JS
+- eslint (npm)
+- babel-eslint (npm)
