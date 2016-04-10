@@ -7,6 +7,7 @@
 " =============================================================================
 
 set nocompatible
+
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -169,6 +170,9 @@ function! CurDir()
 	return curdir
 endfunction
 
+" squash multiple empty lines to one line
+autocmd BufWritePost * %!cat -s
+
 " --- hotkey config ---
 
 let mapleader="\<Space>"
@@ -216,7 +220,6 @@ nnoremap <Leader>t# yypVr#
 nnoremap <Leader>t" yypVr"
 nnoremap <Leader>t* yypVr*
 
-
 " =======================================
 " --------------- language --------------
 " =======================================
@@ -259,8 +262,6 @@ autocmd BufRead,BufNewFile *.jsm set filetype=javascript
 " --- ZSH ---
 autocmd BufRead,BufNewFile *.zsh* set filetype=zsh
 
-
-
 " ========================================
 " ---------- plugin setting --------------
 " ========================================
@@ -282,7 +283,6 @@ let g:vimrc_email='kuoe0.tw@gmail.com'
 let g:vimrc_homepage='http://kuoe0.ch/'
 
 nmap<F4> :AuthorInfoDetect<CR>
-
 
 " --- vim-sdcv ---
 nmap <Leader>l :call SearchWord()<CR>
