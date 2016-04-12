@@ -75,8 +75,12 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 set completeopt=longest,menu
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
+" set encoding to UTF-8 (this option is not supported in neovim)
+if !has('nvim')
+	set encoding=utf-8
+endif
 " read multiple file encoding
-set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936,cp950,gb18030
+set fileencodings=ucs-bom,utf-8,cp936,cp950,gb18030
 
 " enable line number
 set number 	" 'set nu' for short
