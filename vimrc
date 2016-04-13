@@ -19,14 +19,14 @@ Plugin 'gmarik/vundle'
 " orignal repo on github
 Plugin 'kana/vim-fakeclip'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'KuoE0/vim-template'
+Plugin 'kuoe0/vim-template'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'KuoE0/AuthorInfo'
+Plugin 'kuoe0/AuthorInfo'
 Plugin 'edsono/vim-matchit'
 Plugin 'chusiang/vim-sdcv.git'
 Plugin 'mattn/emmet-vim'
@@ -130,7 +130,7 @@ set showbreak=⇇
 
 " search setting
 set hlsearch 	" highlight search result
-set incsearch 	" go to first result 
+set incsearch 	" go to first result
 set ignorecase  " ignore case when searching
 set smartcase   " ignore case if search pattern is all lowercase, case-sensitive otherwise
 
@@ -157,10 +157,10 @@ set spell
 
 " status setting
 set laststatus=2
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ 
-set statusline+=\ \ \ [%{&ff}/%Y]\ 
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
-set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L\ 
+set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\
+set statusline+=\ \ \ [%{&ff}/%Y]\
+set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
+set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L\
 
 function! HasPaste()
 	if &paste
@@ -201,13 +201,13 @@ imap <F3>	:sh<CR>
 imap <c-r> <Esc><c-r>
 
 " move around split windows
-" move to the below split 
+" move to the below split
 map <c-j> <c-w>j
-" move to the above split 
+" move to the above split
 map <c-k> <c-w>k
-" move to the left split 
+" move to the left split
 map <c-h> <c-w>h
-" move to the right split  
+" move to the right split
 map <c-l> <c-w>l
 
 " toggle list
@@ -268,7 +268,7 @@ let g:airline#extensions#tabline#enabled = 1
 " --- AuthorInfo ---
 let g:vimrc_author='KuoE0'
 let g:vimrc_email='kuoe0.tw@gmail.com'
-let g:vimrc_homepage='http://kuoe0.ch/'
+let g:vimrc_homepage='http://kuoe0.tw/'
 
 nmap<F4> :AuthorInfoDetect<CR>
 
@@ -354,7 +354,7 @@ nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
 nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " --- ag ---
-nmap <Leader>ag :Ag 
+nmap <Leader>ag :Ag
 
 " --- Tagbar ---
 nmap <F8> :TagbarToggle<CR>
