@@ -47,6 +47,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rhysd/conflict-marker.vim' " git conflict marker
 Plugin 'ternjs/tern_for_vim'
 
+Plugin 'kuoe0/vim-scavenger'
 Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
 
 Plugin 'junegunn/vim-pseudocl'
@@ -174,9 +175,6 @@ function! CurDir()
 	return curdir
 endfunction
 
-" squash multiple empty lines to one line
-autocmd BufWritePost * %!cat -s
-
 " --- hotkey config ---
 
 let mapleader="\<Space>"
@@ -228,25 +226,11 @@ nnoremap <Leader>t* yypVr*
 " --------------- language --------------
 " =======================================
 
-" highlight trailing space
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd BufWinEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
-autocmd InsertEnter *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave *.{c,cc,cpp,h,py,js,idl,html,webidl} call clearmatches()
-
 " --- C/C++ ---
 autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpen
 
 " --- Python ---
-function! PythonStyle()
-	set expandtab
-	" mark invalid indentation
-	highlight BadWhitespace ctermbg=red guibg=red 
-	match BadWhitespace /^\t\+/ 
-
-endfunction
-autocmd BufRead,BufNewFile *py,*pyw call PythonStyle()
+autocmd BufRead,BufNewFile *py,*pyw set expandtab
 
 " --- JavaScript ---
 autocmd BufRead,BufNewFile *js set tabstop=2
@@ -375,3 +359,5 @@ nmap <Leader>ag :Ag
 " --- Tagbar ---
 nmap <F8> :TagbarToggle<CR>
 
+" --- vim-scavenger ---
+let g:auto_clean_up_when_write = 1
