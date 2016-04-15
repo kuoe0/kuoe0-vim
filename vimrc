@@ -360,4 +360,5 @@ nmap <Leader>ag :Ag
 nmap <F8> :TagbarToggle<CR>
 
 " --- vim-scavenger ---
-let g:auto_clean_up_when_write = 1
+let g:scavenger_auto_clean_up_on_write = 1
+let g:scavenger_auto_clean_up_trailing_spaces_only_added = 1
