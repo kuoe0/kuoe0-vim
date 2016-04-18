@@ -21,7 +21,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ap/vim-css-color' " Highlight with color code in CSS
-Plugin 'bling/vim-airline'
 Plugin 'brookhong/cscope.vim'
 Plugin 'chusiang/vim-sdcv.git'
 Plugin 'clones/vim-zsh' " ZSH syntax highlight
@@ -51,6 +50,8 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " --- general config ---
 
