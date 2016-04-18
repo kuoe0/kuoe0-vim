@@ -41,18 +41,7 @@ if [ ! -d ~/.vim/undo ]; then
 	mkdir ~/.vim/undo
 fi
 
-# download vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+# download plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # install all plugin
-~/.vim/update.sh
-
-# install YCM
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
-cd ~/.vim
-
-# install tern_for_vim
-cd ~/.vim/bundle/tern_for_vim
-npm install
-cd ~/.vim
-
+make all

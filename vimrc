@@ -8,53 +8,11 @@
 
 set nocompatible
 
-filetype off
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+source ~/.vim/plugin_list.vim
 
-" Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
-
-" orignal repo on github
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'airblade/vim-gitgutter' " show git diff on current buffer
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ap/vim-css-color' " Highlight with color code in CSS
-Plugin 'brookhong/cscope.vim'
-Plugin 'chusiang/vim-sdcv.git'
-Plugin 'clones/vim-zsh' " ZSH syntax highlight
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'edsono/vim-matchit'
-Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'junegunn/vim-oblique'
-Plugin 'junegunn/vim-pseudocl'
-Plugin 'kana/vim-fakeclip'
-Plugin 'kuoe0/AuthorInfo'
-Plugin 'kuoe0/vim-scavenger'
-Plugin 'kuoe0/vim-template'
-Plugin 'majutsushi/tagbar'
-Plugin 'mattn/emmet-vim'
-Plugin 'mhinz/vim-startify' " Fancy start screen to quick access
-Plugin 'nvie/vim-flake8' " PEP8 compliant for Python
-Plugin 'othree/html5.vim' " HTML5 syntax / omnicomplete tool
-Plugin 'rhysd/conflict-marker.vim' " Git conflict marker
-Plugin 'rking/ag.vim'
-Plugin 'ryanoasis/vim-devicons' " Fancy font icons
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'thinca/vim-localrc'
-Plugin 'thinca/vim-logcat' " Logcat syntax highlight
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+call plug#end()
 
 " --- general config ---
 
