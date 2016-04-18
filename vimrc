@@ -17,41 +17,38 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " orignal repo on github
-Plugin 'kana/vim-fakeclip'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'kuoe0/vim-template'
-Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'brookhong/cscope.vim'
+Plugin 'chusiang/vim-sdcv.git'
+Plugin 'clones/vim-zsh' " ZSH syntax highlight
+Plugin 'edsono/vim-matchit'
+Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'junegunn/vim-oblique'
+Plugin 'junegunn/vim-pseudocl'
+Plugin 'kana/vim-fakeclip'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kuoe0/AuthorInfo'
+Plugin 'kuoe0/vim-scavenger'
+Plugin 'kuoe0/vim-template'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/emmet-vim'
+Plugin 'nvie/vim-flake8' " PEP8 compliant for Python
+Plugin 'rhysd/conflict-marker.vim' " Git conflict marker
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'thinca/vim-localrc'
+Plugin 'thinca/vim-logcat' " Logcat syntax highlight
+Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'kuoe0/AuthorInfo'
-Plugin 'edsono/vim-matchit'
-Plugin 'chusiang/vim-sdcv.git'
-Plugin 'mattn/emmet-vim'
-Plugin 'thinca/vim-localrc'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-" ZSH syntax highlight
-Plugin 'clones/vim-zsh'
-" Logcat syntax highlight
-Plugin 'thinca/vim-logcat'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'sjl/gundo.vim'
-Plugin 'tpope/vim-abolish'
-Plugin 'brookhong/cscope.vim'
-Plugin 'rking/ag.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'rhysd/conflict-marker.vim' " git conflict marker
-Plugin 'ternjs/tern_for_vim'
-
-Plugin 'kuoe0/vim-scavenger'
-Plugin 'jeetsukumaran/vim-buffergator' " buffer switch
-
-Plugin 'junegunn/vim-pseudocl'
-Plugin 'junegunn/vim-oblique'
 
 " --- general config ---
 
