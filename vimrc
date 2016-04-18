@@ -36,6 +36,7 @@ Plugin 'kuoe0/vim-scavenger'
 Plugin 'kuoe0/vim-template'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
+Plugin 'mhinz/vim-startify' " Fancy start screen to quick access
 Plugin 'nvie/vim-flake8' " PEP8 compliant for Python
 Plugin 'rhysd/conflict-marker.vim' " Git conflict marker
 Plugin 'rking/ag.vim'
@@ -365,3 +366,7 @@ let g:scavenger_auto_clean_up_trailing_spaces_only_added = 1
 
 " --- vim-devicons ---
 let g:webdevicons_enable_airline_tabline = 0
+
+" --- vim-startify ---
+let g:startify_custom_header = []
+let g:startify_session_dir = '~/.vim/session'
