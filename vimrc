@@ -49,6 +49,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'ryanoasis/vim-devicons' " fancy font icons
 
 " --- general config ---
 
@@ -359,3 +360,6 @@ nmap <F8> :TagbarToggle<CR>
 " --- vim-scavenger ---
 let g:scavenger_auto_clean_up_on_write = 1
 let g:scavenger_auto_clean_up_trailing_spaces_only_added = 1
+
+" --- vim-devicons ---
+let g:webdevicons_enable_airline_tabline = 0
