@@ -19,6 +19,7 @@ Plugin 'gmarik/vundle'
 " orignal repo on github
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter' " show git diff on current buffer
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ap/vim-css-color' " Highlight with color code in CSS
 Plugin 'brookhong/cscope.vim'
@@ -370,3 +371,7 @@ let g:webdevicons_enable_airline_tabline = 0
 " --- vim-startify ---
 let g:startify_custom_header = []
 let g:startify_session_dir = '~/.vim/session'
+
+" --- vim-gitgutter ---
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
