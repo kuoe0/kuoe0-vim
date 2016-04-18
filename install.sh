@@ -44,4 +44,7 @@ fi
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # install all plugin
-make all
+make plugin_install
+
+# dev env
+ln -s ../../dev/pre-commit .git/hooks/
