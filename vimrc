@@ -39,6 +39,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'mhinz/vim-startify' " Fancy start screen to quick access
 Plugin 'nvie/vim-flake8' " PEP8 compliant for Python
+Plugin 'othree/html5.vim' " HTML5 syntax / omnicomplete tool
 Plugin 'rhysd/conflict-marker.vim' " Git conflict marker
 Plugin 'rking/ag.vim'
 Plugin 'ryanoasis/vim-devicons' " Fancy font icons
