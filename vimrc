@@ -42,6 +42,7 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
+Plugin 'ap/vim-css-color' " Highlight with color code in CSS
 Plugin 'ternjs/tern_for_vim'
 Plugin 'thinca/vim-localrc'
 Plugin 'thinca/vim-logcat' " Logcat syntax highlight
