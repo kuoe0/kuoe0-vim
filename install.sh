@@ -8,16 +8,15 @@ echo $OS
 
 # setting readlink command
 if [ "$OS" = 'Linux' ]; then
-	READLINK='readlink'
+	REALPATH='readlink -f'
 elif [ "$OS" = 'Darwin' ]; then
-	# need to install GNU coreutils
-	READLINK='greadlink'
+	REALPATH='realpath'
 elif [ "$OS" = 'FreeBSD' ]; then
-	READLINK='readlink'
+	REALPATH='realpath'
 fi
 
 # absolute path of this script, e.g. /home/usr/bin/foo.sh
-SCRIPT=`$READLINK -f $0`
+SCRIPT=`$REALPATH $0`
 # absolute path of current directory
 SCRIPTPATH=`dirname "$SCRIPT"`
 
