@@ -1,5 +1,6 @@
 autoload
 plugged
 undo
+init.vim
 .*.swp
 *.pyc
