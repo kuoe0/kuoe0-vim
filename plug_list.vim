@@ -12,6 +12,7 @@ Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
 Plug 'kana/vim-fakeclip'
 Plug 'kuoe0/AuthorInfo'
+Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-scavenger'
 Plug 'kuoe0/vim-template'
 Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp'] }

@@ -149,9 +149,6 @@ nnoremap ; :
 map m :set mouse=nv<CR>
 map <silent><Leader>m :set mouse=<CR>
 
-" buffer switching
-map<tab>   :bn<CR>
-map<s-tab> :bp<CR>
 
 " shortcut for shell
 map <F3>	:sh<CR>
