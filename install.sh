@@ -45,5 +45,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 # install all plugin
 make plugin_install
 
-# dev env
-ln -s ../../dev/pre-commit .git/hooks/
+# development environment
+if [ -e "$SCRIPTPATH/.git/hooks/pre-commit" ]; then
+	rm "$SCRIPTPATH/.git/hooks/pre-commit"
+fi
+ln -s ../../dev/pre-commit "$SCRIPTPATH/.git/hooks/pre-commit"
