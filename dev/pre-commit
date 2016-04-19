@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-PLUGIN_LIST="$GIT_DIR/../plugin_list.vim"
+PLUGIN_LIST="$GIT_DIR/../plug_list.vim"
 sort -c $PLUGIN_LIST 2>/dev/null 1>/dev/null
 if [ "$?" != "0" ]; then
-	echo 'Sorting plugin_list.vim ...'
+	echo 'Sorting plug_list.vim ...'
 	sort $PLUGIN_LIST -o $PLUGIN_LIST
 	echo 'Please commit again!'
 	exit 1

@@ -9,9 +9,8 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-
-source ~/.vim/plugin_list.vim
-
+source ~/.vim/plug_function.vim
+source ~/.vim/plug_list.vim
 call plug#end()
 
 " --- general config ---
