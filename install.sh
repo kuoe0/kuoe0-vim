@@ -22,18 +22,35 @@ SCRIPTPATH=`dirname "$SCRIPT"`
 
 echo "$SCRIPTPATH"
 
-# remove origin .vim and .vimrc 
-if [ -d ~/.vim ] || [ -h ~/.vim ]; then
-	rm -rf ~/.vim
+# setup for vim
+VIM_FOLDER="$HOME/.vim"
+VIM_CONFIG="$HOME/.vimrc"
+if [ -d "$VIM_FOLDER" ]; then
+	rm -rf "$VIM_FOLDER"
+elif [ -h "$VIM_FOLDER" ]; then
+	rm "$VIM_FOLDER"
 fi
+ln -s "$SCRIPTPATH" "$VIM_FOLDER"
 
-if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
-	rm ~/.vimrc
+if [ -f "$VIM_CONFIG" ] || [ -h "$VIM_CONFIG" ]; then
+	rm "$VIM_CONFIG"
 fi
+ln -s "$SCRIPTPATH/vimrc" "$VIM_CONFIG"
 
-# re-link them with current file
-ln -s "$SCRIPTPATH" ~/.vim
-ln -s "$SCRIPTPATH/vimrc" ~/.vimrc
+# setup for neovim
+NEOVIM_FOLDER="$HOME/.config/nvim"
+NEOVIM_CONFIG="$NEOVIM_FOLDER/init.vim"
+if [ -d "$NEOVIM_FOLDER" ]; then
+	rm -rf "$NEOVIM_FOLDER"
+elif [ -h "$NEOVIM_FOLDER" ]; then
+	rm "$NEOVIM_FOLDER"
+fi
+ln -s "$SCRIPTPATH" "$NEOVIM_FOLDER"
+
+if [ -f "$NEOVIM_CONFIG" ] || [ -h "$NEOVIM_CONFIG" ]; then
+	rm "$NEOVIM_CONFIG"
+fi
+ln -s "$SCRIPTPATH/vimrc" "$NEOVIM_CONFIG"
 
 # create undo directory
 if [ ! -d ~/.vim/undo ]; then
