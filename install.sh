@@ -43,7 +43,7 @@ fi
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # install all plugin
-make plugin_install
+make install-plug
 
 # development environment
 if [ -e "$SCRIPTPATH/.git/hooks/pre-commit" ]; then
