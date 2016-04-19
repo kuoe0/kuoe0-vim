@@ -149,6 +149,9 @@ nnoremap ; :
 map m :set mouse=nv<CR>
 map <silent><Leader>m :set mouse=<CR>
 
+" indentation
+vnoremap<tab>   >gv
+vnoremap<s-tab> <gv
 
 " shortcut for shell
 map <F3>	:sh<CR>
