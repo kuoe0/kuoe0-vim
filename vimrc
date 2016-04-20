@@ -29,7 +29,7 @@ try
 		colorscheme solarized
 	endif
 catch /^Vim\%((\a\+)\)\=:E185/
-	colorscheme morning
+	colorscheme desert
 endtry
 set background=dark
 
