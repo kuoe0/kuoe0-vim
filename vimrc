@@ -23,7 +23,11 @@ syntax on
 " color config
 set t_Co=256
 try
-	colorscheme solarized
+	if $VIM_COLORSCHEME != ''
+		colorscheme $VIM_COLORSCHEME
+	else
+		colorscheme solarized
+	endif
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme morning
 endtry
