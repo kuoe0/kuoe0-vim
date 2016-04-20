@@ -118,6 +118,8 @@ set mouse=a
 
 " spell check
 set spell
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 " status setting
 set laststatus=2
