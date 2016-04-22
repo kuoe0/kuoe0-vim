@@ -22,16 +22,18 @@ syntax on
 
 " color config
 set t_Co=256
+set background=dark
+
 try
 	if $VIM_COLORSCHEME != ''
+		if $BASE16_SUPPORT == 1 && split($VIM_COLORSCHEME, '-')[0] == 'base16'
+			let base16colorspace = 256 " Access colors present in 256 colorspace
+		endif
 		colorscheme $VIM_COLORSCHEME
-	else
-		colorscheme solarized
 	endif
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme desert
 endtry
-set background=dark
 
 " auto reload vimrc when editing
 autocmd! bufwritepost .vimrc source ~/.vimrc
