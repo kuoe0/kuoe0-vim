@@ -5,6 +5,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'html', 'js'] } " Highlight with color code in CSS
 Plug 'brookhong/cscope.vim'
 Plug 'chriskempson/base16-vim' " base16 colorscheme set
+Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'clones/vim-zsh', { 'for' : 'zsh' }" ZSH syntax highlight
 Plug 'ctrlpvim/ctrlp.vim' " Quick file search
 Plug 'edsono/vim-matchit'
