@@ -30,6 +30,8 @@ try
 			let base16colorspace = 256 " Access colors present in 256 colorspace
 		endif
 		colorscheme $VIM_COLORSCHEME
+	else
+		colorscheme desert
 	endif
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme desert
