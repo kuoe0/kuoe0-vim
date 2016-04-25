@@ -2,6 +2,13 @@
 # Author: 	KuoE0 <kuoe0.tw@gmail.com>
 # Description: 	Auto install vimrc
 
+remove_by_path() {
+	TARGET="$1"
+	if [ -f "$TARGET" ] || [ -h "$TARGET" ] || [ -d "$TARGET" ]; then
+		rm -rf "$TARGET"
+	fi
+}
+
 # OS test
 OS=$(uname)
 echo $OS
@@ -16,45 +23,31 @@ elif [ "$OS" = 'FreeBSD' ]; then
 fi
 
 # absolute path of this script, e.g. /home/usr/bin/foo.sh
-SCRIPT=`$REALPATH $0`
+SCRIPT=$(REALPATH "$0")
 # absolute path of current directory
-SCRIPTPATH=`dirname "$SCRIPT"`
+SCRIPTPATH=$(dirname "$SCRIPT")
 
 echo "$SCRIPTPATH"
 
 # setup for vim
 VIM_FOLDER="$HOME/.vim"
 VIM_CONFIG="$HOME/.vimrc"
-if [ -d "$VIM_FOLDER" ]; then
-	rm -rf "$VIM_FOLDER"
-elif [ -h "$VIM_FOLDER" ]; then
-	rm "$VIM_FOLDER"
-fi
+remove_by_path "$VIM_FOLDER"
+remove_by_path "$VIM_CONFIG"
 ln -s "$SCRIPTPATH" "$VIM_FOLDER"
-
-if [ -f "$VIM_CONFIG" ] || [ -h "$VIM_CONFIG" ]; then
-	rm "$VIM_CONFIG"
-fi
 ln -s "$SCRIPTPATH/vimrc" "$VIM_CONFIG"
 
 # setup for neovim
 NEOVIM_FOLDER="$HOME/.config/nvim"
 NEOVIM_CONFIG="$NEOVIM_FOLDER/init.vim"
-if [ -d "$NEOVIM_FOLDER" ]; then
-	rm -rf "$NEOVIM_FOLDER"
-elif [ -h "$NEOVIM_FOLDER" ]; then
-	rm "$NEOVIM_FOLDER"
-fi
+remove_by_path "$NEOVIM_FOLDER"
+remove_by_path "$NEOVIM_CONFIG"
 ln -s "$SCRIPTPATH" "$NEOVIM_FOLDER"
-
-if [ -f "$NEOVIM_CONFIG" ] || [ -h "$NEOVIM_CONFIG" ]; then
-	rm "$NEOVIM_CONFIG"
-fi
 ln -s "$SCRIPTPATH/vimrc" "$NEOVIM_CONFIG"
 
 # create undo directory
-if [ ! -d ~/.vim/undo ]; then
-	mkdir ~/.vim/undo
+if [ ! -d "$HOME/.vim/undo" ]; then
+	mkdir "$HOME/.vim/undo"
 fi
 
 # download plug
