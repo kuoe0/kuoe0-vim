@@ -232,6 +232,11 @@ let g:username='KuoE0'
 map<F9> <plug>NERDTreeTabsToggle<CR>
 
 " --- airline ---
+if $VIM_AIRLINE_THEME != ''
+	let g:airline_theme=$VIM_AIRLINE_THEME
+else
+	let g:airline_theme='papercolor'
+endif
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
