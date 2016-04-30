@@ -9,8 +9,16 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-source ~/.vim/plug_function.vim
-source ~/.vim/plug_list.vim
+" --- functions for plug.vim ---
+" build YCM when updated
+function! BuildYCM(info)
+	echo 'status:' . a:info.status
+	if a:info.status == 'updated' || a:info.status == 'installed'
+		!./install.sh --clang-completer
+	endif
+endfunction
+
+source ~/.vim/plugin-list.vim
 call plug#end()
 
 " --- general config ---
