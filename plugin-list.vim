@@ -16,7 +16,7 @@ Plug 'kana/vim-fakeclip'
 Plug 'kuoe0/AuthorInfo'
 Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-scavenger'
-Plug 'kuoe0/vim-template'
+Plug 'kuoe0/vim-skeleton' " skeleton for new files
 Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp'] }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access

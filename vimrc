@@ -366,3 +366,7 @@ function! SetupAutopep8()
 	endif
 endfunction
 autocmd VimEnter * :call SetupAutopep8()
+
+" --- vim-skeleton ---
+let g:skeleton_author = "KuoE0"
+let g:skeleton_email = "kuoe0.tw@gmail.com"
