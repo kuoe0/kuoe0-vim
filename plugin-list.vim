@@ -30,6 +30,7 @@ Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs' " File explorer
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'tell-k/vim-autopep8', { 'for': ['python', 'python2', 'python3'] } " Applies autopep8 to your current file
 Plug 'thinca/vim-localrc'
 Plug 'thinca/vim-logcat', { 'for': 'logcat' } " Logcat syntax highlight
 Plug 'tpope/vim-abolish'

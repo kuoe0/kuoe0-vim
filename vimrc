@@ -357,3 +357,12 @@ let g:startify_session_dir = '~/.vim/session'
 " --- vim-gitgutter ---
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+
+" --- vim-autopep8 ---
+function! SetupAutopep8()
+	if exists(':Autopep8')
+		let g:autopep8_disable_show_diff = 1
+		autocmd BufWritePre * :Autopep8
+	endif
+endfunction
+autocmd VimEnter * :call SetupAutopep8()
