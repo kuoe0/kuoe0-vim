@@ -345,6 +345,7 @@ nmap <F8> :TagbarToggle<CR>
 " --- vim-scavenger ---
 let g:scavenger_auto_clean_up_on_write = 1
 let g:scavenger_auto_clean_up_trailing_spaces_only_added = 1
+let g:scavenger_exclude_on_blank_lines = ['python']
 
 " --- vim-devicons ---
 let g:webdevicons_enable_airline_tabline = 0
