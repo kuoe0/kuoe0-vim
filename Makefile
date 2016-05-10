@@ -11,7 +11,7 @@ install:
 clean:
 	rm -rf ./autoload ./plugged
 
-refresh-plug: plugin_clean plugin_install
+refresh-plug: clean-plug install-plug
 
 install-plug:
 	@echo 'Installing plugins...'
