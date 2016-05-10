@@ -1,4 +1,5 @@
 Plug 'Lokaltog/vim-easymotion'
+Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
