@@ -10,8 +10,8 @@ Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'clones/vim-zsh', { 'for' : 'zsh' }" ZSH syntax highlight
 Plug 'ctrlpvim/ctrlp.vim' " Quick file search
 Plug 'edsono/vim-matchit'
-Plug 'godlygeek/tabular' " text alignment
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
+Plug 'junegunn/vim-easy-align' " text alignment
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
 Plug 'kana/vim-fakeclip'

@@ -371,8 +371,8 @@ autocmd VimEnter * :call SetupAutopep8()
 let g:skeleton_author = "KuoE0"
 let g:skeleton_email = "kuoe0.tw@gmail.com"
 
-" --- tabular ---
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs[:<>/!]\@<!:[:<>/!]\@!.*/<CR>
-vmap <Leader>a: :Tabularize /:\zs[:<>/!]\@<!:[:<>/!]\@!.*/<CR>
+" --- vim-easy-align ---
+nmap <Leader>a= :EasyAlign =<CR>
+vmap <Leader>a= :EasyAlign =<CR>
+nmap <Leader>a: :EasyAlign :<CR>
+vmap <Leader>a: :EasyAlign :<CR>
