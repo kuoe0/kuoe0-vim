@@ -39,6 +39,7 @@ Plug 'terryma/vim-multiple-cursors' " multiple cursor
 Plug 'thinca/vim-localrc'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-liquid' " Vim Liquid runtime files with Jekyll enhancements
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline' " Fancy status bar
