@@ -3,7 +3,7 @@
 # KuoE0, 2016-04-19 02:06
 #
 
-all: clean install
+all: clean install install-plug
 
 install:
 	./install.sh
