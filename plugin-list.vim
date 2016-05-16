@@ -11,6 +11,7 @@ Plug 'clones/vim-zsh', { 'for' : 'zsh' }" ZSH syntax highlight
 Plug 'ctrlpvim/ctrlp.vim' " Quick file search
 Plug 'edsono/vim-matchit'
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
+Plug 'jelera/vim-javascript-syntax' " Javascript syntax Highlight
 Plug 'junegunn/vim-easy-align' " text alignment
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
