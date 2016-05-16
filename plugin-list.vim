@@ -31,9 +31,9 @@ Plug 'rking/ag.vim'
 Plug 'ryanoasis/vim-devicons' " Fancy font icons
 Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs' " File explorer
 Plug 'scrooloose/syntastic'
-Plug 'sjl/gundo.vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'sjl/gundo.vim' " visualize undo tree
 Plug 'tell-k/vim-autopep8', { 'for': ['python', 'python2', 'python3'] } " Applies autopep8 to your current file
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors' " multiple cursor
 Plug 'thinca/vim-localrc'
 Plug 'tpope/vim-abolish'
