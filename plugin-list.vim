@@ -35,7 +35,6 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tell-k/vim-autopep8', { 'for': ['python', 'python2', 'python3'] } " Applies autopep8 to your current file
 Plug 'terryma/vim-multiple-cursors' " multiple cursor
 Plug 'thinca/vim-localrc'
-Plug 'thinca/vim-logcat', { 'for': 'logcat' } " Logcat syntax highlight
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
