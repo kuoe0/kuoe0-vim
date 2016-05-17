@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 function! BuildYCM(info)
 	echo 'status:' . a:info.status
 	if a:info.status == 'updated' || a:info.status == 'installed'
-		!./install.sh --clang-completer
+		!./install.sh --clang-completer --racer-completer
 	endif
 endfunction
 
@@ -292,6 +292,8 @@ let g:ycm_confirm_extra_conf = 0
 nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
+" For Rust
+let g:ycm_rust_src_path = '~/Works/rust/src'
 
 " --- Ctrl-P ---
 let g:ctrlp_working_path_mode = 'ra'
