@@ -29,6 +29,7 @@ Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 syntax / omnicomplete tool
 Plug 'phongvcao/vim-stardict' " dictionary lookup
 Plug 'rhysd/conflict-marker.vim' " Git conflict marker
 Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim' " rust support
 Plug 'ryanoasis/vim-devicons' " Fancy font icons
 Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs' " File explorer
 Plug 'scrooloose/syntastic'
