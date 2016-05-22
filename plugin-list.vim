@@ -34,6 +34,7 @@ Plug 'rust-lang/rust.vim' " rust support
 Plug 'ryanoasis/vim-devicons' " Fancy font icons
 Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs' " File explorer
 Plug 'scrooloose/syntastic'
+Plug 'sfiera/vim-emacsmodeline' " Parse mode line and setlocal of Emacs in vim
 Plug 'sjl/gundo.vim' " visualize undo tree
 Plug 'tell-k/vim-autopep8', { 'for': ['python', 'python2', 'python3'] } " Applies autopep8 to your current file
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
