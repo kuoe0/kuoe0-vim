@@ -1,5 +1,4 @@
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
@@ -13,6 +12,7 @@ Plug 'ctrlpvim/ctrlp.vim' " Quick file search
 Plug 'edsono/vim-matchit'
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
 Plug 'jelera/vim-javascript-syntax' " Javascript syntax Highlight
+Plug 'jiangmiao/auto-pairs' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'junegunn/vim-easy-align' " text alignment
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
