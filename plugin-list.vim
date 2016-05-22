@@ -2,6 +2,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
+Plug 'alvan/vim-closetag' " Auto close paired html tag
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'html', 'js'] } " Highlight with color code in CSS
 Plug 'brookhong/cscope.vim'
 Plug 'cakebaker/scss-syntax.vim' " SASS syntax highlight

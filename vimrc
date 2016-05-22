@@ -378,3 +378,6 @@ nmap <Leader>a= :EasyAlign =<CR>
 vmap <Leader>a= :EasyAlign =<CR>
 nmap <Leader>a: :EasyAlign :<CR>
 vmap <Leader>a: :EasyAlign :<CR>
+
+" --- vim-closetag ---
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*xml"
