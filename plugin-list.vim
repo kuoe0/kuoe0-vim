@@ -25,6 +25,7 @@ Plug 'kuoe0/vim-skeleton' " skeleton for new files
 Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp'] }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
+Plug 'myusuf3/numbers.vim' " dynamic line numbers display
 Plug 'nvie/vim-flake8' " PEP8 compliant for Python
 Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 syntax / omnicomplete tool
 Plug 'phongvcao/vim-stardict' " dictionary lookup
