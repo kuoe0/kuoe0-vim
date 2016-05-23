@@ -22,7 +22,7 @@ Plug 'kuoe0/AuthorInfo'
 Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-scavenger'
 Plug 'kuoe0/vim-skeleton' " skeleton for new files
-Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp'] }
+Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp', 'java'] }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
