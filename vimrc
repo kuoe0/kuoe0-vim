@@ -209,6 +209,7 @@ autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpen
 
 " --- Python ---
 autocmd BufRead,BufNewFile *py,*pyw set expandtab
+autocmd BufRead,BufNewFile *.py3 set filetype=python
 
 " --- JavaScript ---
 autocmd BufRead,BufNewFile *js set tabstop=2
@@ -364,7 +365,7 @@ nmap [h <Plug>GitGutterPrevHunk
 function! SetupAutopep8()
 	if exists(':Autopep8')
 		let g:autopep8_disable_show_diff = 1
-		autocmd BufWritePre * :Autopep8
+		autocmd BufWritePre *.py,*.py3 :Autopep8
 	endif
 endfunction
 autocmd VimEnter * :call SetupAutopep8()
