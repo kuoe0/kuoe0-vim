@@ -205,7 +205,9 @@ nnoremap <Leader>t* yypVr*
 " =======================================
 
 " --- C/C++ ---
-autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpen
+if winwidth(0) >= 120
+	autocmd BufRead,BufNewFile *.{c,cpp,h,hpp} TagbarOpen
+endif
 
 " --- Python ---
 autocmd BufRead,BufNewFile *py,*pyw set expandtab
