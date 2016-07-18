@@ -298,28 +298,6 @@ nnoremap <Leader>type :YcmCompleter GetType<CR>
 " For Rust
 let g:ycm_rust_src_path = '~/Works/rust/src'
 
-" --- Ctrl-P ---
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_max_files = 0
-let g:ctrlp_dotfiles = 0 " don't search dotfiles
-
-nnoremap <Leader>ff :CtrlP<CR>
-nnoremap <Leader>fb :CtrlPBuffer<CR>
-nnoremap <Leader>fr :CtrlPMRU<CR>
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-	\ --ignore .git
-	\ --ignore .svn
-	\ --ignore .hg
-	\ --ignore .DS_Store
-	\ --ignore "**/*.pyc"
-	\ -g ""'
-
-let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-    \ }
-
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
 
@@ -384,3 +362,21 @@ vmap <Leader>a: :EasyAlign :<CR>
 
 " --- vim-closetag ---
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*xml"
+
+" --- vim-fzf ---
+" search a file in current directory
+nnoremap <Leader>ff :Files<CR>
+" search in current directory and only tracked by git
+nnoremap <Leader>fg :GFiles<CR>
+" search a file in opened bufferrs
+nnoremap <Leader>fb :Buffers<CR>
+" search a file in history
+nnoremap <Leader>fr :History<CR>
+" search a line in current buffer
+nnoremap <Leader>fl :BLines<CR>
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
