@@ -27,3 +27,7 @@ vim-multiple-cursors
 - ctrl-n: select current word / select next
 - ctrl-p: cancel current word and back to previous
 - ctrl-x: do not select current word and go to next
+
+For fzf.vim
+
+Install fzf first! Use homebrew on Mac. for linux install by yourself and link it to /usr/local/opt/fzf.
