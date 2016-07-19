@@ -41,6 +41,7 @@ Plug 'tell-k/vim-autopep8', { 'for': ['python', 'python2', 'python3'] } " Applie
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors' " multiple cursor
 Plug 'thinca/vim-localrc'
+Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' } " tmux syntax support
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-liquid' " Vim Liquid runtime files with Jekyll enhancements
