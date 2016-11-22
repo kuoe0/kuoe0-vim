@@ -31,3 +31,17 @@ vim-multiple-cursors
 For fzf.vim
 
 Install fzf first! Use homebrew on Mac. for linux install by yourself and link it to /usr/local/opt/fzf.
+
+Notice
+------
+
+**Ctrl-H mapping doesn't work on macOS**
+
+Execute the following commands in terminal to fix it:
+
+```
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti
+```
+
+See [here](https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work) for more information.
