@@ -6,7 +6,7 @@
 all: clean install install-plug
 
 install:
-	./install.sh
+	./setup.sh
 
 clean:
 	rm -rf ./autoload ./plugged
