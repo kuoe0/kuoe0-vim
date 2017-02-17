@@ -50,6 +50,11 @@ if [ ! -d "$HOME/.vim/undo" ]; then
 	mkdir "$HOME/.vim/undo"
 fi
 
+# requirement
+pip2 install neovim jedi autopep8
+npm -g install eslint babel-eslint
+brew install cscope cmake ctags fzf
+
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
