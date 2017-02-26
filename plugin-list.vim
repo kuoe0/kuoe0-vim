@@ -10,7 +10,6 @@ Plug 'cakebaker/scss-syntax.vim' " SASS syntax highlight
 Plug 'chriskempson/base16-vim' " base16 colorscheme set
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'clones/vim-zsh', { 'for' : 'zsh' }" ZSH syntax highlight
-Plug 'edsono/vim-matchit'
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
 Plug 'jelera/vim-javascript-syntax' " Javascript syntax Highlight
 Plug 'jiangmiao/auto-pairs' " automatic closing of quotes, parenthesis, brackets, etc.
