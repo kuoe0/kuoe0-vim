@@ -40,6 +40,9 @@ ln -s "$SCRIPTPATH/vimrc" "$VIM_CONFIG"
 # setup for neovim
 NEOVIM_FOLDER="$HOME/.config/nvim"
 NEOVIM_CONFIG="$NEOVIM_FOLDER/init.vim"
+if [ ! -f "$(dirname $NEOVIM_FOLDER)" ]; then
+	mkdir "$(dirname $NEOVIM_FOLDER  )"
+fi
 remove_by_path "$NEOVIM_CONFIG"
 remove_by_path "$NEOVIM_FOLDER"
 ln -s "$SCRIPTPATH" "$NEOVIM_FOLDER"
