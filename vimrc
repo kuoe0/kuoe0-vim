@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 function! BuildYCM(info)
 	echo 'status:' . a:info.status
 	if a:info.status == 'updated' || a:info.status == 'installed'
-		!./install.sh --clang-completer --racer-completer
+		!./install.py --clang-completer --racer-completer
 	endif
 endfunction
 
