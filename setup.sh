@@ -54,9 +54,13 @@ if [ ! -d "$HOME/.vim/undo" ]; then
 fi
 
 # requirement
+if [ "$OS" = 'Linux' ]; then
+	sudo apt install cscope cmake exuberant-ctags nodejs
+else # Darwin
+	brew install node cscope cmake ctags fzf
+fi
 pip2 install neovim jedi autopep8
 npm -g install eslint babel-eslint
-brew install cscope cmake ctags fzf
 
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
