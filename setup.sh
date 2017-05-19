@@ -56,11 +56,12 @@ fi
 # requirement
 if [ "$OS" = 'Linux' ]; then
 	sudo apt install cscope cmake exuberant-ctags nodejs npm
+	sudo npm -g install eslint babel-eslint
 else # Darwin
 	brew install node cscope cmake ctags fzf
+	npm -g install eslint babel-eslint
 fi
 pip2 install neovim jedi autopep8
-npm -g install eslint babel-eslint
 
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
