@@ -55,7 +55,7 @@ fi
 
 # requirement
 if [ "$OS" = 'Linux' ]; then
-	sudo apt install cscope cmake exuberant-ctags nodejs
+	sudo apt install cscope cmake exuberant-ctags nodejs npm
 else # Darwin
 	brew install node cscope cmake ctags fzf
 fi
