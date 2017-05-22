@@ -55,13 +55,16 @@ fi
 
 # requirement
 if [ "$OS" = 'Linux' ]; then
-	sudo apt install cscope cmake exuberant-ctags nodejs npm
+	sudo apt install cscope cmake exuberant-ctags nodejs npm python-pip python3-pip curl
 	sudo npm -g install eslint babel-eslint
+	sudo pip2 install neovim jedi autopep8
+	sudo pip3 install neovim
 else # Darwin
 	brew install node cscope cmake ctags fzf
 	npm -g install eslint babel-eslint
+	pip2 install neovim jedi autopep8
+	pip3 install neovim
 fi
-pip2 install neovim jedi autopep8
 
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
