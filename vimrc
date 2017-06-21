@@ -381,3 +381,12 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" --- incsearch.vim ---
+" how to use:
+" - using <tab> or <s-tab> to switch the search result
+" - using <C-J> or <C-K> to the search result at next page or previous page
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+" search w/o moving the cursor
+map g/ <Plug>(incsearch-stay)
