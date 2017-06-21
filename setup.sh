@@ -66,6 +66,9 @@ else # Darwin
 	pip3 install neovim
 fi
 
+# racer support for YCM
+git clone https://github.com/rust-lang/rust ~/.vim/rust
+
 # download plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 

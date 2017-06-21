@@ -1,6 +1,7 @@
 autoload
 plugged
 undo
+rust
 init.vim
 .*.swp
 *.pyc

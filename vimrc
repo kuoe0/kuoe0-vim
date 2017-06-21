@@ -297,7 +297,7 @@ nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
 " For Rust
-let g:ycm_rust_src_path = '~/Works/rust/src'
+let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
 
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
