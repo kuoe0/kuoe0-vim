@@ -52,5 +52,4 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline' " Fancy status bar
 Plug 'vim-airline/vim-airline-themes' " vim-airline themes
-Plug 'yonchu/accelerated-smooth-scroll' " smooth scroll
 Plug 'zdict/zdict.vim' " zdict integration
