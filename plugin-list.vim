@@ -9,7 +9,7 @@ Plug 'brookhong/cscope.vim'
 Plug 'cakebaker/scss-syntax.vim' " SASS syntax highlight
 Plug 'chriskempson/base16-vim' " base16 colorscheme set
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
-Plug 'clones/vim-zsh', { 'for' : 'zsh' }" ZSH syntax highlight
+Plug 'clones/vim-zsh', { 'for' : 'zsh' } " ZSH syntax highlight
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
