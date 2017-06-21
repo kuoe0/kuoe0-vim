@@ -361,6 +361,16 @@ vmap <Leader>a= :EasyAlign =<CR>
 nmap <Leader>a: :EasyAlign :<CR>
 vmap <Leader>a: :EasyAlign :<CR>
 
+" --- vim-easymotion
+" Search by 2-character
+nmap s <Plug>(easymotion-s2)
+map <Leader>w <Plug>(easymotion-wl)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+map <Leader>/ <Plug>(easymotion-sn)
+map <Leader>f <Plug>(easymotion-bd-f)
+
 " --- vim-closetag ---
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*xml"
 
