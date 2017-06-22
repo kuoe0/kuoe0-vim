@@ -362,14 +362,21 @@ nmap <Leader>a: :EasyAlign :<CR>
 vmap <Leader>a: :EasyAlign :<CR>
 
 " --- vim-easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " case-insensitive
+
 " Search by 2-character
 nmap s <Plug>(easymotion-s2)
-map <Leader>w <Plug>(easymotion-wl)
+" Jump to anywhere in current line
+nmap f <Plug>(easymotion-bd-wl)
+" Jump to any line below current line
 map <Leader>j <Plug>(easymotion-j)
+" Jump to any line above current line
 map <Leader>k <Plug>(easymotion-k)
-
+" Search and jump to any result
 map <Leader>/ <Plug>(easymotion-sn)
-map <Leader>f <Plug>(easymotion-bd-f)
+" Jump to anywhere by the specified character
+map <Leader>s <Plug>(easymotion-bd-f)
 
 " --- vim-closetag ---
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*xml"
