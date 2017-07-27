@@ -369,11 +369,7 @@ let g:EasyMotion_smartcase = 1 " case-insensitive
 nmap s <Plug>(easymotion-s2)
 " Jump to anywhere in current line
 nmap f <Plug>(easymotion-bd-wl)
-" Jump to any line below current line
-map <Leader>j <Plug>(easymotion-j)
-" Jump to any line above current line
-map <Leader>k <Plug>(easymotion-k)
-" Search and jump to any result
+" Jump to anywhere by the specified keyword
 map <Leader>/ <Plug>(easymotion-sn)
 " Jump to anywhere by the specified character
 map <Leader>s <Plug>(easymotion-bd-f)
