@@ -337,6 +337,7 @@ let g:webdevicons_enable_airline_tabline = 0
 " --- vim-startify ---
 let g:startify_custom_header = []
 let g:startify_session_dir = '~/.vim/session'
+nmap <Leader>h :Startify<CR>
 
 " --- vim-gitgutter ---
 nmap ]h <Plug>GitGutterNextHunk
