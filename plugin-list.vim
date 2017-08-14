@@ -26,6 +26,7 @@ Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-janitor'
 Plug 'kuoe0/vim-skeleton' " skeleton for new files
 Plug 'lfv89/vim-interestingwords' " highlight multiple words
+Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp', 'java'] }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access

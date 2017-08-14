@@ -403,3 +403,6 @@ map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 " search w/o moving the cursor
 map g/ <Plug>(incsearch-stay)
+
+" --- rainbow ---
+let g:rainbow_active = 1 " enable rainbow parentheses
