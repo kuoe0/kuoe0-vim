@@ -321,7 +321,7 @@ nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
 nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " --- ag ---
-nmap <Leader>ag :Ag
+nmap <Leader>ag :Ag<CR>
 
 " --- Tagbar ---
 nmap <F8> :TagbarToggle<CR>
