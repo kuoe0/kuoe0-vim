@@ -34,6 +34,7 @@ Plug 'myusuf3/numbers.vim' " dynamic line numbers display
 Plug 'nvie/vim-flake8' " PEP8 compliant for Python
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 syntax / omnicomplete tool
+Plug 'pelodelfuego/vim-swoop'
 Plug 'phongvcao/vim-stardict' " dictionary lookup
 Plug 'rhysd/conflict-marker.vim' " Git conflict marker
 Plug 'rking/ag.vim'
