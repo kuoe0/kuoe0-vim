@@ -407,3 +407,6 @@ map g/ <Plug>(incsearch-stay)
 
 " --- rainbow ---
 let g:rainbow_active = 1 " enable rainbow parentheses
+
+" --- vim-markdown ---
+let g:vim_markdown_folding_disabled = 1
