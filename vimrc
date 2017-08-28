@@ -298,6 +298,8 @@ nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <Leader>type :YcmCompleter GetType<CR>
 " For Rust
 let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
+" Python interpreter
+let g:ycm_server_python_interpreter = substitute( system( 'which python' ), "\n", "", "" )
 
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
