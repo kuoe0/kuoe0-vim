@@ -18,6 +18,8 @@ function! BuildYCM(info)
 	endif
 endfunction
 
+" get the location of fzf installed from homebrew
+let g:fzf_dir = substitute(system('brew --prefix'), "\n", "/opt/fzf", "")
 source ~/.vim/plugin-list.vim
 call plug#end()
 
