@@ -55,8 +55,8 @@ fi
 
 # requirement
 if [ "$OS" = 'Linux' ]; then
-	sudo apt install cscope cmake exuberant-ctags nodejs npm python-pip python3-pip curl
-	sudo npm -g install eslint babel-eslint
+	sudo apt install cscope cmake exuberant-ctags python-pip python3-pip curl
+	npm -g install eslint babel-eslint
 	sudo pip2 install neovim jedi autopep8
 	sudo pip3 install neovim
 else # Darwin
