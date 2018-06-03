@@ -57,13 +57,11 @@ fi
 if [ "$OS" = 'Linux' ]; then
 	sudo apt install cscope cmake exuberant-ctags python-pip python3-pip curl
 	npm -g install eslint babel-eslint
-	sudo pip2 install neovim jedi autopep8
-	sudo pip3 install neovim
+	sudo pip3 install neovim jedi autopep8
 else # Darwin
 	brew install node cscope cmake ctags fzf
 	npm -g install eslint babel-eslint
-	pip2 install neovim jedi autopep8
-	pip3 install neovim
+	pip3 install neovim jedi autopep8
 fi
 
 # racer support for YCM
