@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 PLUGIN_LIST="plugin-list.vim"
-sort -c $PLUGIN_LIST 2>/dev/null 1>/dev/null
+LC_ALL=C sort -c $PLUGIN_LIST 2>/dev/null 1>/dev/null
 if [ "$?" != "0" ]; then
 	echo 'Sorting $PLUGIN_LIST ...'
-	sort $PLUGIN_LIST -o $PLUGIN_LIST
+	LC_ALL=C sort $PLUGIN_LIST -o $PLUGIN_LIST
 	git reset HEAD $PLUGIN_LIST
 	echo 'Please commit again!'
 	exit 1
