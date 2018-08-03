@@ -10,7 +10,7 @@ Plug 'cakebaker/scss-syntax.vim' " SASS syntax highlight
 Plug 'chriskempson/base16-vim' " base16 colorscheme set
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'clones/vim-zsh', { 'for' : 'zsh' } " ZSH syntax highlight
-Plug g:fzf_dir | Plug 'junegunn/fzf.vim'
+Plug 'ekalinin/Dockerfile.vim' " syntax of dockerfile
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch.vim'
@@ -57,3 +57,4 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline' " Fancy status bar
 Plug 'vim-airline/vim-airline-themes' " vim-airline themes
 Plug 'zdict/zdict.vim' " zdict integration
+Plug g:fzf_dir | Plug 'junegunn/fzf.vim'
