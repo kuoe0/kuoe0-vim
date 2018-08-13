@@ -60,6 +60,9 @@ pip install neovim
 pip3 install neovim jedi autopep8
 
 # racer support for YCM
+if [ -d "$VIM_FOLDER/rust" ]; then
+	rm -rf "$VIM_FOLDER/rust"
+fi
 git clone https://github.com/rust-lang/rust ~/.vim/rust
 
 # download plug
