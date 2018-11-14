@@ -25,6 +25,7 @@ Plug 'kuoe0/AuthorInfo'
 Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-janitor'
 Plug 'kuoe0/vim-skeleton' " skeleton for new files
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'lfv89/vim-interestingwords' " highlight multiple words
 Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp', 'java'] }
