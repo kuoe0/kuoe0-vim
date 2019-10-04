@@ -295,6 +295,10 @@ nnoremap <Leader>def :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <Leader>type :YcmCompleter GetType<CR>
 " Show all references of this symbol
 nnoremap <Leader>ref :YcmCompleter GoToReferences<CR>
+" Show all errors
+nnoremap <Leader>err :YcmDiags<CR>
+" Fix the error
+nnoremap <Leader>fix :YcmCompleter FixIt<CR>
 " For Rust
 let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
 " Python interpreter
