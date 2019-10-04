@@ -257,7 +257,7 @@ let g:vimrc_homepage='http://kuoe0.tw/'
 nmap<F4> :AuthorInfoDetect<CR>
 
 " --- vim-sdcv ---
-nmap <Leader>l :call SearchWord()<CR>
+nmap <Leader>dict :call SearchWord()<CR>
 
 " --- emmet-vim ---
 let g:user_emmet_install_global = 0

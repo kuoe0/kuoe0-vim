@@ -1,6 +1,7 @@
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Valloric/ListToggle'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
