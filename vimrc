@@ -290,9 +290,11 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_cache_omnifunc = 0
 let g:ycm_confirm_extra_conf = 0
 " jump to definition or declaration
-nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>def :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " get type of current variable
 nnoremap <Leader>type :YcmCompleter GetType<CR>
+" Show all references of this symbol
+nnoremap <Leader>ref :YcmCompleter GoToReferences<CR>
 " For Rust
 let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
 " Python interpreter
@@ -301,23 +303,23 @@ let g:ycm_server_python_interpreter = substitute( system( 'which python3' ), "\n
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
 
-" --- cscope ---
-" s: Find this C symbol
-nnoremap  <leader>css :call CscopeFind('s', expand('<cword>'))<CR>
-" g: Find this definition
-nnoremap  <leader>csg :call CscopeFind('g', expand('<cword>'))<CR>
-" d: Find functions called by this function
-nnoremap  <leader>csd :call CscopeFind('d', expand('<cword>'))<CR>
-" c: Find functions calling this function
-nnoremap  <leader>csc :call CscopeFind('c', expand('<cword>'))<CR>
-" t: Find this text string
-nnoremap  <leader>cst :call CscopeFind('t', expand('<cword>'))<CR>
-" e: Find this egrep pattern
-nnoremap  <leader>cse :call CscopeFind('e', expand('<cword>'))<CR>
-" f: Find this file
-nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
-" i: Find files #including this file
-nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
+" " --- cscope ---
+" " s: Find this C symbol
+" nnoremap  <leader>css :call CscopeFind('s', expand('<cword>'))<CR>
+" " g: Find this definition
+" nnoremap  <leader>csg :call CscopeFind('g', expand('<cword>'))<CR>
+" " d: Find functions called by this function
+" nnoremap  <leader>csd :call CscopeFind('d', expand('<cword>'))<CR>
+" " c: Find functions calling this function
+" nnoremap  <leader>csc :call CscopeFind('c', expand('<cword>'))<CR>
+" " t: Find this text string
+" nnoremap  <leader>cst :call CscopeFind('t', expand('<cword>'))<CR>
+" " e: Find this egrep pattern
+" nnoremap  <leader>cse :call CscopeFind('e', expand('<cword>'))<CR>
+" " f: Find this file
+" nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
+" " i: Find files #including this file
+" nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " --- ag ---
 nmap <Leader>ag :Ag<CR>
