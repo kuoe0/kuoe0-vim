@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 function! BuildYCM(info)
 	echo 'status:' . a:info.status
 	if a:info.status == 'updated' || a:info.status == 'installed'
-		!./install.py --clang-completer --racer-completer
+		!python3 install.py --clang-completer --racer-completer
 	endif
 endfunction
 
@@ -301,7 +301,7 @@ nnoremap <Leader>type :YcmCompleter GetType<CR>
 " For Rust
 let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
 " Python interpreter
-let g:ycm_server_python_interpreter = substitute( system( 'which python' ), "\n", "", "" )
+let g:ycm_server_python_interpreter = substitute( system( 'which python3' ), "\n", "", "" )
 
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
