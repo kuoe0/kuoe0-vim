@@ -54,10 +54,10 @@ if [ ! -d "$HOME/.vim/undo" ]; then
 fi
 
 # requirement
-brew install node cscope cmake ctags fzf python python3
-npm -g install eslint babel-eslint
-pip install neovim
-pip3 install neovim jedi autopep8
+brew install node cscope cmake ctags fzf python@2 python
+pip2 install pynvim
+pip3 install pynvim jedi autopep8
+npm -g install eslint babel-eslint neovim
 
 # racer support for YCM
 if [ -d "$VIM_FOLDER/rust" ]; then
