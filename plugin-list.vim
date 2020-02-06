@@ -37,6 +37,7 @@ Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
+Plug 'nacitar/a.vim' " switch between header file and cpp file
 Plug 'nvie/vim-flake8' " PEP8 compliant for Python
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 syntax / omnicomplete tool
