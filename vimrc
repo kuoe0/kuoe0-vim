@@ -345,6 +345,7 @@ let g:webdevicons_enable_airline_tabline = 0
 " --- vim-startify ---
 let g:startify_custom_header = []
 let g:startify_session_dir = '~/.vim/session'
+autocmd User Startified setlocal cursorline
 nmap <Leader>h :Startify<CR>
 
 " --- numbers.vim ---
