@@ -65,6 +65,9 @@ set backspace=indent,eol,start
 " highlight current line
 set cursorline
 
+" highlight entire column of cursor
+set cursorcolumn
+
 " show 80 column border
 set colorcolumn=81 	" 'set cc=81' for short
 hi ColorColumn ctermbg=0
