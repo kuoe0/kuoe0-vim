@@ -200,6 +200,8 @@ nnoremap <Leader>t# yypVr#
 nnoremap <Leader>t" yypVr"
 nnoremap <Leader>t* yypVr*
 
+autocmd FileType qf nnoremap <buffer> q :q<CR>
+
 " =======================================
 " --------------- language --------------
 " =======================================
