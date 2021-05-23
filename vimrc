@@ -491,7 +491,7 @@ endfunction
 " Toggle Vista
 nnoremap <space>V :Vista <CR>
 
-let g:vista_default_executive = 'ctags'
+let g:vista_default_executive = 'vim_lsp'
 let g:vista_executive_for = {
 			\ 'cpp': 'vim_lsp',
 			\ 'python': 'vim_lsp',
@@ -499,6 +499,7 @@ let g:vista_executive_for = {
 
 " --- vim-lsp ---
 
+let g:lsp_log_file = '/tmp/vim-lsp.log'
 if executable('pyls')
     " pip install python-language-server
     au User lsp_setup call lsp#register_server({

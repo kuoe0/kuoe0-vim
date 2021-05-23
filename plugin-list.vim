@@ -35,6 +35,7 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 Plug 'liuchengxu/vista.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
+Plug 'mattn/vim-lsp-settings'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
 Plug 'nacitar/a.vim' " switch between header file and cpp file
