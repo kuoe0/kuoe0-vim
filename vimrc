@@ -61,9 +61,6 @@ endif
 " read multiple file encoding
 set fileencodings=ucs-bom,utf-8,cp936,cp950,gb18030
 
-" enable line number
-set number 	" 'set nu' for short
-
 " backapse setting
 set backspace=indent,eol,start
 
@@ -342,6 +339,10 @@ let g:webdevicons_enable_airline_tabline = 0
 let g:startify_custom_header = []
 let g:startify_session_dir = '~/.vim/session'
 nmap <Leader>h :Startify<CR>
+
+" --- numbers.vim ---
+
+let g:numbers_exclude = ['defx', 'vista_kind']
 
 " --- vim-gitgutter ---
 nmap ]h <Plug>GitGutterNextHunk
