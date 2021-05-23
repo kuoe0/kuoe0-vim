@@ -423,6 +423,17 @@ let g:vista_executive_for = {
 			\ 'python': 'vim_lsp',
 			\ }
 
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+set statusline+=%{NearestMethodOrFunction()}
+
+" By default vista.vim never run if you don't call it explicitly. Calling
+" RunForNearestMethodOrFunction() when entering VIM to show the nearest function
+" in the statusline automatically,
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
 " --- vim-lsp ---
 
 let g:lsp_log_file = '/tmp/vim-lsp.log'
