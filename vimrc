@@ -218,7 +218,6 @@ autocmd BufRead,BufNewFile *.py3 set filetype=python
 " --- JavaScript ---
 autocmd BufRead,BufNewFile *js set tabstop=2
 autocmd BufRead,BufNewFile *js set shiftwidth=2
-let g:syntastic_javascript_checkers = ['eslint']
 
 " --- Arduino ---
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
@@ -240,9 +239,6 @@ autocmd BufRead,BufNewFile *.zsh* set filetype=zsh
 " --- vim-template ---
 let g:email='kuoe0.tw@gmail.com'
 let g:username='KuoE0'
-
-" --- NED Tree ---
-map<F9> <plug>NERDTreeTabsToggle<CR>
 
 " --- airline ---
 if $VIM_AIRLINE_THEME != ''
@@ -332,9 +328,6 @@ nnoremap <Leader>undo :GundoToggle<CR>
 
 " --- ag ---
 nmap <Leader>ag :Ag<CR>
-
-" --- Tagbar ---
-nmap <F8> :TagbarToggle<CR>
 
 " --- vim-janitor ---
 let g:janitor_auto_clean_up_on_write = 1
