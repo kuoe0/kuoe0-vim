@@ -18,8 +18,6 @@ function! BuildYCM(info)
 	endif
 endfunction
 
-" get the location of fzf installed from homebrew
-let g:fzf_dir = substitute(system('brew --prefix'), "\n", "/opt/fzf", "")
 source ~/.vim/plugin-list.vim
 call plug#end()
 
@@ -383,24 +381,6 @@ map <Leader>s <Plug>(easymotion-bd-f)
 " --- vim-closetag ---
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*xml"
 
-" --- vim-fzf ---
-" search a file in current directory
-nnoremap <Leader>ff :Files<CR>
-" search in current directory and only tracked by git
-nnoremap <Leader>fg :GFiles<CR>
-" search a file in opened bufferrs
-nnoremap <Leader>fb :Buffers<CR>
-" search a file in history
-nnoremap <Leader>fr :History<CR>
-" search a line in current buffer
-nnoremap <Leader>fl :BLines<CR>
-
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
-
 " --- incsearch.vim ---
 " how to use:
 " - using <tab> or <s-tab> to switch the search result
@@ -515,3 +495,15 @@ if executable('pyls')
         \ 'allowlist': ['python'],
         \ })
 endif
+
+" --- vim-clap ---
+" search a file in current directory
+nnoremap <Leader>ff :Clap files<CR>
+" search in current directory and only tracked by git
+nnoremap <Leader>fg :Clap gfiles<CR>
+" search a file in opened bufferrs
+nnoremap <Leader>fb :Clap buffers<CR>
+" search a file in history
+nnoremap <Leader>fh :Clap history<CR>
+" search a line in current buffer
+nnoremap <Leader>fl :Clap lines<CR>

@@ -30,6 +30,7 @@ Plug 'kuoe0/vim-janitor'
 Plug 'kuoe0/vim-skeleton' " skeleton for new files
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'lfv89/vim-interestingwords' " highlight multiple words
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 Plug 'liuchengxu/vista.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
@@ -61,4 +62,3 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline' " Fancy status bar
 Plug 'vim-airline/vim-airline-themes' " vim-airline themes
 Plug 'zdict/zdict.vim' " zdict integration
-Plug g:fzf_dir | Plug 'junegunn/fzf.vim'
