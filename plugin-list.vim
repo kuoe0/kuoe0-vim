@@ -1,7 +1,6 @@
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Valloric/ListToggle'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
@@ -36,6 +35,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
 Plug 'nacitar/a.vim' " switch between header file and cpp file
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'nvie/vim-flake8' " PEP8 compliant for Python
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pelodelfuego/vim-swoop'

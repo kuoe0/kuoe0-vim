@@ -9,15 +9,7 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-" --- functions for plug.vim ---
-" build YCM when updated
-function! BuildYCM(info)
-	echo 'status:' . a:info.status
-	if a:info.status == 'updated' || a:info.status == 'installed'
-		!python3 install.py --clang-completer --racer-completer
-	endif
-endfunction
-
+" --- plug.vim ---
 source ~/.vim/plugin-list.vim
 call plug#end()
 
@@ -264,67 +256,8 @@ nmap <Leader>dict :call SearchWord()<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 
-" --- syntastic ---
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-
-" --- YouCompleteMe ---
-" YCM generator: https://github.com/rdnetto/YCM-Generator
-let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" completion for keyword in language
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-" load from tagfiles like tags generated from exuberant ctags
-let g:ycm_collect_identifiers_from_tags_files = 1
-" disable cache
-let g:ycm_cache_omnifunc = 0
-let g:ycm_confirm_extra_conf = 0
-" jump to definition or declaration
-nnoremap <Leader>def :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" get type of current variable
-nnoremap <Leader>type :YcmCompleter GetType<CR>
-" Show all references of this symbol
-nnoremap <Leader>ref :YcmCompleter GoToReferences<CR>
-" Show all errors
-nnoremap <Leader>err :YcmDiags<CR>
-" Fix the error
-nnoremap <Leader>fix :YcmCompleter FixIt<CR>
-" For Rust
-let g:ycm_rust_src_path = '$HOME/.vim/rust/src'
-" Python interpreter
-let g:ycm_server_python_interpreter = substitute( system( 'which python3' ), "\n", "", "" )
-
 " --- Gundo ---
 nnoremap <Leader>undo :GundoToggle<CR>
-
-" " --- cscope ---
-" " s: Find this C symbol
-" nnoremap  <leader>css :call CscopeFind('s', expand('<cword>'))<CR>
-" " g: Find this definition
-" nnoremap  <leader>csg :call CscopeFind('g', expand('<cword>'))<CR>
-" " d: Find functions called by this function
-" nnoremap  <leader>csd :call CscopeFind('d', expand('<cword>'))<CR>
-" " c: Find functions calling this function
-" nnoremap  <leader>csc :call CscopeFind('c', expand('<cword>'))<CR>
-" " t: Find this text string
-" nnoremap  <leader>cst :call CscopeFind('t', expand('<cword>'))<CR>
-" " e: Find this egrep pattern
-" nnoremap  <leader>cse :call CscopeFind('e', expand('<cword>'))<CR>
-" " f: Find this file
-" nnoremap  <leader>csf :call CscopeFind('f', expand('<cword>'))<CR>
-" " i: Find files #including this file
-" nnoremap  <leader>csi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " --- ag ---
 nmap <Leader>ag :Ag<CR>
@@ -513,3 +446,77 @@ nnoremap <Leader>fb :Clap buffers<CR>
 nnoremap <Leader>fh :Clap history<CR>
 " search a line in current buffer
 nnoremap <Leader>fl :Clap lines<CR>
+
+" --- coc.nvim ---
+let g:coc_global_extensions = [
+      \ 'coc-clangd',
+      \ 'coc-git',
+      \ 'coc-highlight',
+      \ 'coc-pairs',
+      \ 'coc-prettier',
+      \ 'coc-pyright',
+      \ 'coc-rust-analyzer',
+      \ 'coc-smartf',
+      \ 'coc-spell-checker',
+      \ 'coc-yank' ]
+nmap <silent> <Leader>coc :CocList<CR>
+
+" Use <tab> and <s-tab> to go through the completion list.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" GoTo code navigation.
+nmap <silent> <Leader>gd <Plug>(coc-definition)
+nmap <silent> <Leader>gy <Plug>(coc-type-definition)
+nmap <silent> <Leader>gi <Plug>(coc-implementation)
+nmap <silent> <Leader>gr <Plug>(coc-references)
+
+" Fix the error if possible
+nmap <silent> <Leader>fix :call CocAction('doQuickfix')<CR>
+" Refactor naming
+nmap <silent> <Leader>re :call CocAction('refactor')<CR>
+" List diagnostics (errors and warnings)
+nmap <silent> <Leader>err :CocList --normal diagnostics<CR>
+" Search symbols in the current buffer (errors and warnings)
+nmap <silent> <Leader>s :CocList outline<CR>
+" Show symbols in the entire projects (errors and warnings)
+nmap <silent> <Leader>gs :CocList symbols<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" coc-highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
+
+" coc-smartf
+" press <esc> to cancel.
+nmap f <Plug>(coc-smartf-forward)
+nmap F <Plug>(coc-smartf-backward)
+nmap rf <Plug>(coc-smartf-repeat)
+nmap rF <Plug>(coc-smartf-repeat-opposite)
+
+augroup Smartf
+  autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#6638F0
+  autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#504945
+augroup end
+
+" coc-prettier
+command! -nargs=0 Prettify :CocCommand prettier.formatFile
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" coc-spell-checker
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
