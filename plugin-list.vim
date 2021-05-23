@@ -1,5 +1,6 @@
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
@@ -21,6 +22,8 @@ Plug 'junegunn/vim-easy-align' " text alignment
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
 Plug 'kana/vim-fakeclip'
+Plug 'kristijanhusak/defx-git'
+Plug 'kristijanhusak/defx-icons'
 Plug 'kuoe0/AuthorInfo'
 Plug 'kuoe0/vim-buffer-switch'
 Plug 'kuoe0/vim-janitor'
@@ -41,7 +44,6 @@ Plug 'rhysd/conflict-marker.vim' " Git conflict marker
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim', { 'for': ['rust'] } " rust support
 Plug 'ryanoasis/vim-devicons' " Fancy font icons
-Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs' " File explorer
 Plug 'scrooloose/syntastic'
 Plug 'sfiera/vim-emacsmodeline' " Parse mode line and setlocal of Emacs in vim
 Plug 'sjl/gundo.vim' " visualize undo tree

@@ -414,3 +414,82 @@ let g:rainbow_active = 1 " enable rainbow parentheses
 
 " --- vim-markdown ---
 let g:vim_markdown_folding_disabled = 1
+
+" --- defx.nvim ---
+call defx#custom#option('_', {
+      \ 'winwidth': 40,
+      \ 'split': 'vertical',
+      \ 'show_ignored_files': 0,
+      \ 'buffer_name': 'defxplorer',
+      \ 'toggle': 1,
+      \ 'resume': 1,
+      \ 'preview_width': 85,
+      \ 'preview_height': 200,
+      \ 'vertical_preview': 1,
+      \ 'floating_preview': 1,
+      \ 'columns': 'git:mark:indent:icons:filename:type'
+      \ })
+
+" Toggle Defx
+nnoremap <space>D :Defx <CR>
+
+autocmd FileType defx call s:defx_settings()
+function! s:defx_settings() abort
+	nnoremap <silent><buffer><expr> ;
+				\ defx#do_action('repeat')
+	nnoremap <silent><buffer><expr> <Space>
+				\ defx#do_action('toggle_select') . 'j'
+	nnoremap <silent><buffer><expr> *
+				\ defx#do_action('toggle_select_all')
+	nnoremap <silent><buffer><expr> cd
+				\ defx#do_action('change_vim_cwd')
+
+	nnoremap <silent><buffer><expr> <CR>
+				\ defx#is_directory() ?
+				\ defx#do_action('open_tree') :
+				\ defx#do_action('preview')
+
+	nnoremap <silent><buffer><expr> b
+				\ defx#do_action('multi', ['close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree', 'close_tree'])
+	nnoremap <silent><buffer><expr> o
+				\ match(bufname('%'), 'defx') >= 0 ?
+				\ (defx#is_directory() ? 0 : defx#do_action('drop')) :
+				\ (defx#is_directory() ? 0 : defx#do_action('multi', ['open', 'quit']))
+	nnoremap <silent><buffer><expr> l
+				\ defx#is_directory() ? defx#do_action('open') : 0
+	nnoremap <silent><buffer><expr> h
+				\ defx#do_action('cd', ['..'])
+	nnoremap <silent><buffer><expr> K
+				\ defx#do_action('new_directory')
+	nnoremap <silent><buffer><expr> N
+				\ defx#do_action('new_file')
+	nnoremap <silent><buffer><expr> d
+				\ defx#do_action('remove')
+	nnoremap <silent><buffer><expr> r
+				\ defx#do_action('rename')
+
+	nnoremap <silent><buffer><expr> L
+				\ defx#do_action('redraw')
+	nnoremap <silent><buffer><expr> S
+				\ defx#do_action('toggle_sort', 'time')
+	nnoremap <silent><buffer><expr> .
+				\ defx#do_action('toggle_ignored_files')
+	nnoremap <silent><buffer><expr> q
+				\ defx#do_action('quit')
+
+	nnoremap <silent><buffer><expr> j
+				\ line('.') == line('$') ? 'gg' : 'j'
+	nnoremap <silent><buffer><expr> k
+				\ line('.') == 1 ? 'G' : 'k'
+
+	nnoremap <silent><buffer><expr> yy
+				\ defx#do_action('yank_path')
+	nnoremap <silent><buffer><expr> <C-g>
+				\ defx#do_action('print')
+
+	nnoremap <silent><buffer><expr> !
+				\ defx#do_action('execute_command')
+	nnoremap <silent><buffer><expr> x
+				\ defx#do_action('execute_system')
+endfunction
+
