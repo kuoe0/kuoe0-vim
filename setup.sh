@@ -55,8 +55,7 @@ fi
 
 # requirement
 brew install node cscope cmake ctags fzf python@2 python
-pip2 install pynvim
-pip3 install pynvim jedi autopep8
+pip3 install pynvim jedi autopep8 pyls
 npm -g install eslint babel-eslint neovim
 
 # racer support for YCM
