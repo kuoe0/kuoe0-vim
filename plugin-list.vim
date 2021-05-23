@@ -30,8 +30,8 @@ Plug 'kuoe0/vim-janitor'
 Plug 'kuoe0/vim-skeleton' " skeleton for new files
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'lfv89/vim-interestingwords' " highlight multiple words
+Plug 'liuchengxu/vista.vim'
 Plug 'luochen1990/rainbow'
-Plug 'majutsushi/tagbar', { 'for': ['c', 'cpp', 'h', 'hpp', 'java'] }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
@@ -40,6 +40,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 syntax / omnicomplete tool
 Plug 'pelodelfuego/vim-swoop'
 Plug 'phongvcao/vim-stardict' " dictionary lookup
+Plug 'prabirshrestha/vim-lsp'
 Plug 'rhysd/conflict-marker.vim' " Git conflict marker
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim', { 'for': ['rust'] } " rust support

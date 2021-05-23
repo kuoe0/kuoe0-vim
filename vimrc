@@ -493,3 +493,24 @@ function! s:defx_settings() abort
 				\ defx#do_action('execute_system')
 endfunction
 
+" --- vista.vim ---
+
+" Toggle Vista
+nnoremap <space>V :Vista <CR>
+
+let g:vista_default_executive = 'ctags'
+let g:vista_executive_for = {
+			\ 'cpp': 'vim_lsp',
+			\ 'python': 'vim_lsp',
+			\ }
+
+" --- vim-lsp ---
+
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
