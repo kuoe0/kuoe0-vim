@@ -9,6 +9,7 @@ Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] } " Highlight with color code 
 Plug 'brookhong/cscope.vim'
 Plug 'chriskempson/base16-vim' " base16 colorscheme set
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
+Plug 'dkprice/vim-easygrep'
 Plug 'ekalinin/Dockerfile.vim' " syntax of dockerfile
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'haya14busa/incsearch-fuzzy.vim'

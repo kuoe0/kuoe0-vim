@@ -531,3 +531,6 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+
+" --- vim-easygrep ---
+let g:EasyGrepMode=1 " search in opened files/buffers
