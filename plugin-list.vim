@@ -33,6 +33,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/vim-lsp-settings'
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'mhinz/vim-startify' " Fancy start screen to quick access
 Plug 'myusuf3/numbers.vim' " dynamic line numbers display
 Plug 'nacitar/a.vim' " switch between header file and cpp file
@@ -59,4 +60,5 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline' " Fancy status bar
 Plug 'vim-airline/vim-airline-themes' " vim-airline themes
+Plug 'wsdjeg/FlyGrep.vim'
 Plug 'zdict/zdict.vim' " zdict integration

@@ -532,5 +532,8 @@ nmap <leader>f  <Plug>(coc-format-selected)
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
+" --- FlyGrep ---
+nnoremap <Leader>g/ :FlyGrep<CR>
+
 " --- vim-easygrep ---
 let g:EasyGrepMode=1 " search in opened files/buffers
