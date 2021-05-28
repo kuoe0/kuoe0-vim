@@ -2,7 +2,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter' " show git diff on current buffer
 Plug 'altercation/vim-colors-solarized'
 Plug 'alvan/vim-closetag' " Auto close paired html tag
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] } " Highlight with color code in CSS
@@ -55,6 +54,7 @@ Plug 'terryma/vim-multiple-cursors' " multiple cursor
 Plug 'thinca/vim-localrc'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive' " for airline branch extension
 Plug 'tpope/vim-liquid' " Vim Liquid runtime files with Jekyll enhancements
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
