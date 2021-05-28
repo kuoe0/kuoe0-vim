@@ -69,9 +69,6 @@ set wildignore+=.git
 " show command
 set showcmd
 
-" show current mode
-set showmode
-
 " show matched parentheses, e.g. () [] {}
 set showmatch
 
@@ -127,23 +124,7 @@ hi SpellBad cterm=underline
 
 " status setting
 set laststatus=2
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\
-set statusline+=\ \ \ [%{&ff}/%Y]\
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
-set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L\
-
-function! HasPaste()
-	if &paste
-		return '[PASTE]'
-	else
-		return ''
-	endif
-endfunction
-
-function! CurDir()
-	let curdir = substitute(getcwd(), $HOME, "~", "")
-	return curdir
-endfunction
+set noshowmode
 
 " --- hotkey config ---
 
@@ -239,6 +220,7 @@ else
 	let g:airline_theme='papercolor'
 endif
 let g:airline_powerline_fonts = 1
+let g:airline_detect_spell= 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
@@ -419,20 +401,9 @@ nnoremap <space>V :Vista <CR>
 
 let g:vista_default_executive = 'vim_lsp'
 let g:vista_executive_for = {
-			\ 'cpp': 'vim_lsp',
+			\ 'cpp': 'coc',
 			\ 'python': 'vim_lsp',
 			\ }
-
-function! NearestMethodOrFunction() abort
-  return get(b:, 'vista_nearest_method_or_function', '')
-endfunction
-
-set statusline+=%{NearestMethodOrFunction()}
-
-" By default vista.vim never run if you don't call it explicitly. Calling
-" RunForNearestMethodOrFunction() when entering VIM to show the nearest function
-" in the statusline automatically,
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
 " --- vim-lsp ---
 
