@@ -14,7 +14,6 @@ Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'jeetsukumaran/vim-buffergator' " buffer switch
-Plug 'jiangmiao/auto-pairs' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'junegunn/vim-easy-align' " text alignment
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
