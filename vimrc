@@ -117,6 +117,9 @@ set clipboard=unnamedplus " use system register (+)
 " mouse
 set mouse=a
 
+" paste mode toggle
+set pastetoggle=<F7>
+
 " spell check
 set spell
 hi clear SpellBad
@@ -333,6 +336,7 @@ call defx#custom#option('_', {
 
 " Toggle Defx
 nnoremap <space>D :Defx <CR>
+nnoremap <F9> :Defx <CR>
 
 autocmd FileType defx call s:defx_settings()
 function! s:defx_settings() abort
@@ -398,6 +402,7 @@ endfunction
 
 " Toggle Vista
 nnoremap <space>V :Vista <CR>
+nnoremap <F8> :Vista <CR>
 
 let g:vista_default_executive = 'vim_lsp'
 let g:vista_executive_for = {
